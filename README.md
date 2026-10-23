@@ -1,0 +1,90 @@
+# CineFuze
+
+**A media center for Android TV boxes with Dolby Vision FEL** – built for the Dune HD Pro 8K Plus and Pro One 8K Plus
+(Amlogic S928X), on its own libVLC build that composites the full enhancement layer of Dolby Vision profile 7 on the GPU.
+
+![Movies wall](screenshots/movies.jpg)
+
+> **Preview.** CineFuze is in beta and tested on Dune HD boxes only. This repository presents the app and hosts
+> its APK under [Releases](https://github.com/djnice/cinefuze/releases).
+
+## Features
+
+### Library
+- Sources: SMB shares (NAS, PC) and the box's own drives (USB, internal HDD); network browsing (NetBIOS, mDNS) that
+  reuses the logins the Dune HD firmware has saved.
+- Movies, TV shows, other videos, photos and music, each with its own wall.
+- Metadata from TMDB in 17 languages (titles, plots, posters, backdrops, title logos), disc art from fanart.tv.
+- Media info read from the files themselves: resolution, HDR10 / HDR10+ / HLG, Dolby Vision profile and FEL / MEL,
+  MaxCLL / MaxFALL and the RPU's L6, Atmos / DTS:X / DTS-HD MA audio, subtitles, chapters.
+- Watched marks, resume points and favourite scenes shared between boxes through the NAS.
+
+### Browsing
+- Four wall layouts: Highlight (the selected title large), Full wall, Large posters, and 2.39:1 variants for scope
+  screens.
+- Sort and filter chips: A–Z, rating, runtime, date added, year, genre, folder; page jumps with P+ / P-.
+- Detail page: backdrop, title logo, director, a technical card, cast with face-centred photos and biographies,
+  extras (TMDB videos, soundtrack), and the trailer in a soft-edged window.
+- TV shows: episode detection from folders and file names, season posters, episode stills, a countdown to the next
+  episode, Blu-ray discs whose chapters are episodes.
+
+### Playback
+- **Dolby Vision profile 7 FEL with its full enhancement layer**, composited on the GPU (MEL is converted to
+  profile 8.1); dual-track (DTDL) MP4 and Blu-ray m2ts.
+- **3D Blu-ray (MVC)** in frame packing for 3D projectors and TVs (MKV / MK3D, m2ts, SSIF).
+- **Audio as an HDMI bitstream:** Dolby TrueHD / Atmos, DTS-HD MA / DTS:X, E-AC-3, AC-3, DTS – per format, only what
+  the receiver takes.
+- Automatic refresh-rate switching, seek previews (made in the background), chapters, audio / subtitle panels, an
+  INFO panel with the live Dolby Vision levels, and a FEL demo mode (split screen: FEL vs. the base layer).
+- Blu-ray folders and ISO images open with the menus of the Dune HD player (HDMV and BD-J); when the main movie
+  starts, CineFuze takes over.
+- Favourite scenes: mark the start and end while a film plays; scene cards and a timeline on the detail page.
+
+### Photos and music
+- Photo wall with dates and places (EXIF), a full-screen viewer with a map of where the photo was taken.
+- A live slideshow rendered on the GPU in four styles – Polaroid, Photo table, Gallery wall, Collage zoom – with music
+  if you like.
+- Music: album wall with covers and disc art (MusicBrainz, Cover Art Archive, fanart.tv), an album page with a
+  spinning record, and a player with three visualizers; FLAC, APE and the usual formats.
+
+### On Dune HD firmware
+- r22 / r24: the Dolby Vision FEL kernel module is installed with the first FEL film (it asks once if root access
+  is off, and switches it back off).
+- r25: the firmware brings the module itself; CineFuze uses it and installs nothing. Newer modules for r25 come as a
+  Dune HD plugin from [vlc-fel-android](https://github.com/djnice/vlc-fel-android/releases).
+
+## Screenshots
+
+![Playback with seek preview](screenshots/playback.jpg)
+<sub>Playback: chapters, Dolby Vision P7 FEL, the seek preview while scrubbing. (The box's screen capture leaves out
+the video plane; the film frame behind the controls is taken from the same file at the same time.)</sub>
+
+| | |
+|---|---|
+| ![Detail page](screenshots/detail.jpg)<br><sub>Detail page: title logo, the trailer in a soft-edged window, the technical card (Dolby Vision P7 FEL)</sub> | ![Technical card](screenshots/techinfo.jpg)<br><sub>MaxCLL / MaxFALL and the RPU's L6, the audio tracks with Atmos</sub> |
+| ![Cast](screenshots/cast.jpg)<br><sub>Cast biography</sub> | ![TV show](screenshots/tvshow.jpg)<br><sub>TV show: seasons, episode stills, watched marks</sub> |
+| ![Full wall](screenshots/layout-wall.jpg)<br><sub>Full wall layout</sub> | ![Large posters](screenshots/layout-large.jpg)<br><sub>Large posters layout</sub> |
+| ![2.39:1](screenshots/layout-scope.jpg)<br><sub>Highlight layout for 2.39:1 screens</sub> | ![Settings](screenshots/settings.jpg)<br><sub>Settings</sub> |
+| ![Photos](screenshots/photos.jpg)<br><sub>Photo wall with dates and places</sub> | ![Slideshow](screenshots/slideshow.jpg)<br><sub>Slideshow, Polaroid style</sub> |
+| ![Album](screenshots/album.jpg)<br><sub>Album page with cover and disc art</sub> | ![Music player](screenshots/music.jpg)<br><sub>Music player with the spectrum visualizer</sub> |
+
+## Requirements
+- An Android TV box with an Amlogic S928X: Dune HD Pro 8K Plus or Pro One 8K Plus (firmware r22, r24, r25).
+- Android 11, 32-bit (armeabi-v7a) userspace.
+- Media on a NAS / PC (SMB) or a drive connected to the box.
+
+## Download
+The APK is under [Releases](https://github.com/djnice/cinefuze/releases). Install it like any other APK on the box
+(from a USB stick or a network share); a newer APK installs over the old one and keeps the library.
+
+## Related projects
+- [vlc-fel-android](https://github.com/djnice/vlc-fel-android) – the libVLC patches, the `dvfel` kernel module and
+  `libdvfelplay` that CineFuze plays Dolby Vision FEL with (GPL), and the Dune HD plugin.
+
+## Credits
+This product uses the TMDB API but is not endorsed or certified by TMDB. Disc art from fanart.tv, music metadata
+from MusicBrainz and the Cover Art Archive, maps © OpenStreetMap contributors. Video playback by VLC (libVLC).
+Film artwork in the screenshots belongs to its owners.
+
+Dolby, Dolby Vision, Dolby Atmos and Dolby TrueHD are trademarks of Dolby Laboratories; DTS, DTS-HD and DTS:X are
+trademarks of DTS, Inc.; Dune HD is a trademark of its owner. CineFuze is not affiliated with any of them.
