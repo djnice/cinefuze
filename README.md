@@ -62,6 +62,7 @@ the video plane; the film frame behind the controls is taken from the same file 
 | | |
 |---|---|
 | ![Detail page](screenshots/detail.jpg)<br><sub>Detail page: title logo, the trailer in a soft-edged window, the technical card (Dolby Vision P7 FEL)</sub> | ![Technical card](screenshots/techinfo.jpg)<br><sub>MaxCLL / MaxFALL and the RPU's L6, the audio tracks with Atmos</sub> |
+| ![Favourite scenes](screenshots/scenes.jpg)<br><sub>Favourite scenes: cards, the film's timeline, play / loop</sub> | ![Extras](screenshots/extras.jpg)<br><sub>Extras: trailers and the soundtrack</sub> |
 | ![Cast](screenshots/cast.jpg)<br><sub>Cast biography</sub> | ![TV show](screenshots/tvshow.jpg)<br><sub>TV show: seasons, episode stills, watched marks</sub> |
 | ![Full wall](screenshots/layout-wall.jpg)<br><sub>Full wall layout</sub> | ![Large posters](screenshots/layout-large.jpg)<br><sub>Large posters layout</sub> |
 | ![2.39:1](screenshots/layout-scope.jpg)<br><sub>Highlight layout for 2.39:1 screens</sub> | ![Settings](screenshots/settings.jpg)<br><sub>Settings</sub> |
