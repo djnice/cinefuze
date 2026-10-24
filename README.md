@@ -1,20 +1,22 @@
 # CineFuze
 
-**A media center for Android TV boxes with Dolby Vision FEL** – built for the Dune HD Pro 8K Plus and Pro One 8K Plus
-(Amlogic S928X), on its own libVLC build that composites the full enhancement layer of Dolby Vision profile 7 on the GPU.
+**A media center for Android TV boxes with Dolby Vision FEL and 3D Blu-ray (MVC)** – built for the Dune HD and
+R_volution players with an Amlogic S928X, on its own libVLC build that composites the full enhancement layer of Dolby
+Vision profile 7 on the GPU and plays 3D Blu-ray (MVC) in frame packing.
 
 [![Sponsor](https://img.shields.io/badge/Sponsor-%E2%98%95%20buy%20me%20a%20coffee-ea4aaa?logo=githubsponsors&logoColor=white)](https://github.com/sponsors/djnice)
 
 ![Movies wall](screenshots/movies.jpg)
 
-> **Preview.** CineFuze is in beta and tested on Dune HD boxes only. This repository presents the app and hosts
-> its APK under [Releases](https://github.com/djnice/cinefuze/releases).
+> **Preview.** CineFuze is in beta. It runs on every S928X player of Dune HD and R_volution (the R_volution
+> firmware is built by Dune HD); it is tested on the Dune HD Pro 8K Plus and Pro One 8K Plus. This repository
+> presents the app and hosts its APK under [Releases](https://github.com/djnice/cinefuze/releases).
 
 ## Features
 
 ### Library
 - Sources: SMB shares (NAS, PC) and the box's own drives (USB, internal HDD); network browsing (NetBIOS, mDNS) that
-  reuses the logins the Dune HD firmware has saved.
+  reuses the logins the player's firmware has saved.
 - Movies, TV shows, other videos, photos and music, each with its own wall.
 - Metadata from TMDB in 17 languages (titles, plots, posters, backdrops, title logos), disc art from fanart.tv.
 - Media info read from the files themselves: resolution, HDR10 / HDR10+ / HLG, Dolby Vision profile and FEL / MEL,
@@ -38,8 +40,8 @@
   the receiver takes.
 - Automatic refresh-rate switching, seek previews (made in the background), chapters, audio / subtitle panels, an
   INFO panel with the live Dolby Vision levels, and a FEL demo mode (split screen: FEL vs. the base layer).
-- Blu-ray folders and ISO images open with the menus of the Dune HD player (HDMV and BD-J); when the main movie
-  starts, CineFuze takes over.
+- Blu-ray folders and ISO images open with the menus of the player's own Blu-ray player (HDMV and BD-J); when the
+  main movie starts, CineFuze takes over.
 - Favourite scenes: mark the start and end while a film plays; scene cards and a timeline on the detail page.
 
 ### Photos and music
@@ -49,11 +51,12 @@
 - Music: album wall with covers and disc art (MusicBrainz, Cover Art Archive, fanart.tv), an album page with a
   spinning record, and a player with three visualizers; FLAC, APE and the usual formats.
 
-### On Dune HD firmware
-- r22 / r24: the Dolby Vision FEL kernel module is installed with the first FEL film (it asks once if root access
-  is off, and switches it back off).
-- r25: the firmware brings the module itself; CineFuze uses it and installs nothing. Newer modules for r25 come as a
-  Dune HD plugin from [vlc-fel-android](https://github.com/djnice/vlc-fel-android/releases).
+### On the player's firmware
+- Firmware without the Dolby Vision FEL module (Dune HD r22 / r24): the kernel module is installed with the first
+  FEL film (it asks once if root access is off, and switches it back off).
+- Firmware with the module (Dune HD r25): the firmware brings it itself; CineFuze uses it and installs nothing.
+  Newer modules come as a Dune HD plugin from [vlc-fel-android](https://github.com/djnice/vlc-fel-android/releases).
+- R_volution players run the same Dune HD-built firmware and are handled the same way.
 
 ## Screenshots
 
@@ -72,7 +75,8 @@ the video plane; the film frame behind the controls is taken from the same file 
 | ![Album](screenshots/album.jpg)<br><sub>Album page with cover and disc art</sub> | ![Music player](screenshots/music.jpg)<br><sub>Music player with the spectrum visualizer</sub> |
 
 ## Requirements
-- An Android TV box with an Amlogic S928X: Dune HD Pro 8K Plus or Pro One 8K Plus (firmware r22, r24, r25).
+- A Dune HD or R_volution player with an Amlogic S928X: Dune HD Pro 8K Plus, Pro One 8K Plus (firmware r22, r24,
+  r25); R_volution PlayerPro 8K, PlayerOne 8K.
 - Android 11, 32-bit (armeabi-v7a) userspace.
 - Media on a NAS / PC (SMB) or a drive connected to the box.
 
@@ -82,7 +86,7 @@ The APK is under [Releases](https://github.com/djnice/cinefuze/releases). Instal
 
 ## Related projects
 - [vlc-fel-android](https://github.com/djnice/vlc-fel-android) – the libVLC patches, the `dvfel` kernel module and
-  `libdvfelplay` that CineFuze plays Dolby Vision FEL with (GPL), and the Dune HD plugin.
+  `libdvfelplay` that CineFuze plays Dolby Vision FEL with, the 3D MVC decoding (GPL), and the Dune HD plugin.
 
 ## Credits
 This product uses the TMDB API but is not endorsed or certified by TMDB. Disc art from fanart.tv, music metadata
@@ -90,4 +94,5 @@ from MusicBrainz and the Cover Art Archive, maps © OpenStreetMap contributors. 
 Film artwork in the screenshots belongs to its owners.
 
 Dolby, Dolby Vision, Dolby Atmos and Dolby TrueHD are trademarks of Dolby Laboratories; DTS, DTS-HD and DTS:X are
-trademarks of DTS, Inc.; Dune HD is a trademark of its owner. CineFuze is not affiliated with any of them.
+trademarks of DTS, Inc.; Dune HD and R_volution are trademarks of their owners. CineFuze is not affiliated with any
+of them.
