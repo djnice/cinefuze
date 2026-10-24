@@ -8,9 +8,9 @@ Vision profile 7 on the GPU and plays 3D Blu-ray (MVC) in frame packing.
 
 ![Movies wall](screenshots/movies.jpg)
 
-> **Preview.** CineFuze is in beta. It runs on every S928X player of Dune HD and R_volution (the R_volution
-> firmware is built by Dune HD); it is tested on the Dune HD Pro 8K Plus and Pro One 8K Plus. This repository
-> presents the app and hosts its APK under [Releases](https://github.com/djnice/cinefuze/releases).
+> **Preview.** CineFuze is in beta. It runs on every S928X player of Dune HD and R_volution; it is tested on the
+> Dune HD Pro 8K Plus, Pro One 8K Plus and the R_volution PlayerPro 8K. This repository presents the app and hosts
+> its APK under [Releases](https://github.com/djnice/cinefuze/releases).
 
 ## Features
 
@@ -56,7 +56,7 @@ Vision profile 7 on the GPU and plays 3D Blu-ray (MVC) in frame packing.
   FEL film (it asks once if root access is off, and switches it back off).
 - Firmware with the module (Dune HD r25): the firmware brings it itself; CineFuze uses it and installs nothing.
   Newer modules come as a Dune HD plugin from [vlc-fel-android](https://github.com/djnice/vlc-fel-android/releases).
-- R_volution players run the same Dune HD-built firmware and are handled the same way.
+- R_volution players are handled the same way.
 
 ## Screenshots
 
