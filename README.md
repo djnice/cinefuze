@@ -3,6 +3,8 @@
 **A media center for Android TV boxes with Dolby Vision FEL** – built for the Dune HD Pro 8K Plus and Pro One 8K Plus
 (Amlogic S928X), on its own libVLC build that composites the full enhancement layer of Dolby Vision profile 7 on the GPU.
 
+[![Sponsor](https://img.shields.io/badge/Sponsor-%E2%98%95%20buy%20me%20a%20coffee-ea4aaa?logo=githubsponsors&logoColor=white)](https://github.com/sponsors/djnice)
+
 ![Movies wall](screenshots/movies.jpg)
 
 > **Preview.** CineFuze is in beta and tested on Dune HD boxes only. This repository presents the app and hosts
