@@ -75,8 +75,7 @@ the video plane; the film frame behind the controls is taken from the same file 
 | ![Album](screenshots/album.jpg)<br><sub>Album page with cover and disc art</sub> | ![Music player](screenshots/music.jpg)<br><sub>Music player with the spectrum visualizer</sub> |
 
 ## Requirements
-- A Dune HD or R_volution player with an Amlogic S928X: Dune HD Pro 8K Plus, Pro One 8K Plus (firmware r22, r24,
-  r25); R_volution PlayerPro 8K, PlayerOne 8K.
+- A Dune HD or R_volution player with an Amlogic S928X.
 - Android 11, 32-bit (armeabi-v7a) userspace.
 - Media on a NAS / PC (SMB) or a drive connected to the box.
 
