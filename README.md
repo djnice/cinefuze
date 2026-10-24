@@ -46,7 +46,7 @@ Vision profile 7 on the GPU and plays 3D Blu-ray (MVC) in frame packing.
 
 ### Photos and music
 - Photo wall with dates and places (EXIF), a full-screen viewer with a map of where the photo was taken.
-- A live slideshow rendered on the GPU in four styles – Polaroid, Photo table, Gallery wall, Collage zoom – with music
+- A live slideshow rendered on the GPU in five styles – Polaroid, Photo table, Gallery wall, Collage zoom, Memories – with music
   if you like.
 - Music: album wall with covers and disc art (MusicBrainz, Cover Art Archive, fanart.tv), an album page with a
   spinning record, and a player with three visualizers; FLAC, APE and the usual formats.
