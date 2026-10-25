@@ -1,16 +1,18 @@
 # CineFuze
 
 **A media center for Android TV boxes with Dolby Vision FEL and 3D Blu-ray (MVC)** – built for the Dune HD and
-R_volution players with an Amlogic S928X, on its own libVLC build that composites the full enhancement layer of Dolby
-Vision profile 7 on the GPU and plays 3D Blu-ray (MVC) in frame packing.
+R_volution players with an Amlogic S928X and the Dune HD players with an Amlogic S905X4, on its own libVLC build that
+plays the full enhancement layer of Dolby Vision profile 7 (composited on the GPU of the S928X, by the Dolby Vision core
+of the S905X4) and 3D Blu-ray (MVC) in frame packing.
 
 [![Sponsor](https://img.shields.io/badge/Sponsor-%E2%98%95%20buy%20me%20a%20coffee-ea4aaa?logo=githubsponsors&logoColor=white)](https://github.com/sponsors/djnice)
 
 ![Movies wall](screenshots/movies.jpg)
 
 > **Preview.** CineFuze is in beta. It runs on every S928X player of Dune HD and R_volution; it is tested on the
-> Dune HD Pro 8K Plus, Pro One 8K Plus and the R_volution PlayerPro 8K. This repository presents the app and hosts
-> its APK under [Releases](https://github.com/djnice/cinefuze/releases).
+> Dune HD Pro 8K Plus, Pro One 8K Plus and the R_volution PlayerPro 8K. Dolby Vision FEL on the S905X4 is new (since
+> 0.8.0-beta2) and tested on the Dune HD Pro Vision 4K (firmware r24). This repository presents the app and hosts its
+> APK under [Releases](https://github.com/djnice/cinefuze/releases).
 
 ## Features
 
@@ -33,13 +35,14 @@ Vision profile 7 on the GPU and plays 3D Blu-ray (MVC) in frame packing.
   episode, Blu-ray discs whose chapters are episodes.
 
 ### Playback
-- **Dolby Vision profile 7 FEL with its full enhancement layer**, composited on the GPU (MEL is converted to
-  profile 8.1); dual-track (DTDL) MP4 and Blu-ray m2ts.
+- **Dolby Vision profile 7 FEL with its full enhancement layer**, composited on the GPU on the S928X and by the
+  SoC's own Dolby Vision core on the S905X4 (MEL is converted to profile 8.1); dual-track (DTDL) MP4 and Blu-ray m2ts.
 - **3D Blu-ray (MVC)** in frame packing for 3D projectors and TVs (MKV / MK3D, m2ts, SSIF).
 - **Audio as an HDMI bitstream:** Dolby TrueHD / Atmos, DTS-HD MA / DTS:X, E-AC-3, AC-3, DTS – per format, only what
   the receiver takes.
 - Automatic refresh-rate switching, seek previews (made in the background), chapters, audio / subtitle panels, an
-  INFO panel with the live Dolby Vision levels, and a FEL demo mode (split screen: FEL vs. the base layer).
+  INFO panel with the live Dolby Vision levels, and a FEL demo mode on the S928X (split screen: FEL vs. the base
+  layer).
 - Blu-ray folders and ISO images open with the menus of the player's own Blu-ray player (HDMV and BD-J); when the
   main movie starts, CineFuze takes over.
 - Favourite scenes: mark the start and end while a film plays; scene cards and a timeline on the detail page.
@@ -57,6 +60,8 @@ Vision profile 7 on the GPU and plays 3D Blu-ray (MVC) in frame packing.
 - Firmware with the module (Dune HD r25): the firmware brings it itself; CineFuze uses it and installs nothing.
   Newer modules come as a Dune HD plugin from [vlc-fel-android](https://github.com/djnice/vlc-fel-android/releases).
 - R_volution players are handled the same way.
+- S905X4 (Dune HD r24; r22 not tested): CineFuze installs its S905X4 kernel module with the first FEL film, the same
+  way. 3D MVC is not tested there yet.
 
 ## Screenshots
 
@@ -75,7 +80,7 @@ the video plane; the film frame behind the controls is taken from the same file 
 | ![Album](screenshots/album.jpg)<br><sub>Album page with cover and disc art</sub> | ![Music player](screenshots/music.jpg)<br><sub>Music player with the spectrum visualizer</sub> |
 
 ## Requirements
-- A Dune HD or R_volution player with an Amlogic S928X.
+- A Dune HD or R_volution player with an Amlogic S928X, or a Dune HD player with an Amlogic S905X4.
 - Android 11, 32-bit (armeabi-v7a) userspace.
 - Media on a NAS / PC (SMB) or a drive connected to the box.
 
