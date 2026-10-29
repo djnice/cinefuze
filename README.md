@@ -63,7 +63,8 @@ of the S905X4) and 3D Blu-ray (MVC) in frame packing.
 - A live slideshow rendered on the GPU in five styles – Polaroid, Photo table, Gallery wall, Collage zoom, Memories – with music
   if you like.
 - Music: album wall with covers and disc art (MusicBrainz, Cover Art Archive, fanart.tv), an album page with a
-  spinning record, and a player with three visualizers; FLAC, APE and the usual formats.
+  spinning record, and a player with four visualizers – bars, ring, neon wave and piano lights; FLAC, APE and the
+  usual formats.
 
 ### On the player's firmware
 - Firmware without the Dolby Vision FEL module (Dune HD r22 / r24): the kernel module is installed with the first
@@ -90,6 +91,10 @@ the video plane; the film frame behind the controls is taken from the same file 
 | ![Photos](screenshots/photos.jpg)<br><sub>Photo wall with dates and places</sub> | ![Slideshow](screenshots/slideshow.jpg)<br><sub>Slideshow, Polaroid style</sub> |
 | ![Album](screenshots/album.jpg)<br><sub>Album page with cover and disc art</sub> | ![Music player](screenshots/music.jpg)<br><sub>Music player with the spectrum visualizer</sub> |
 | ![Folders view](screenshots/folders.jpg)<br><sub>Folders view: file names, the library's facts, the preview</sub> | ![Menu tabs](screenshots/menu-tabs.jpg)<br><sub>Choosing the top menu's tabs</sub> |
+
+![Piano lights visualizer](screenshots/music-piano.jpg)
+<sub>The music player's piano lights visualizer: rainbow silk waves and spikes over a keyboard whose keys light up
+with their own frequency band.</sub>
 
 ![Live TV](screenshots/live-tv.jpg)
 <sub>Live TV: groups, channels with what is on now, now and next. (A public playlist from iptv-org with an
