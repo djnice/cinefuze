@@ -19,7 +19,7 @@ of the S905X4) and 3D Blu-ray (MVC) in frame packing.
 ### Library
 - Sources: SMB shares (NAS, PC) and the box's own drives (USB, internal HDD); network browsing (NetBIOS, mDNS) that
   reuses the logins the player's firmware has saved.
-- Movies, TV shows, other videos, photos and music, each with its own wall.
+- Movies, TV shows, other videos, photos and music, each with its own wall – or all of them as folders.
 - Metadata from TMDB in 17 languages (titles, plots, posters, backdrops, title logos), disc art from fanart.tv.
 - Media info read from the files themselves: resolution, HDR10 / HDR10+ / HLG, Dolby Vision profile and FEL / MEL,
   MaxCLL / MaxFALL and the RPU's L6, Atmos / DTS:X / DTS-HD MA audio, subtitles, chapters.
@@ -33,6 +33,10 @@ of the S905X4) and 3D Blu-ray (MVC) in frame packing.
   extras (TMDB videos, soundtrack), and the trailer in a soft-edged window.
 - TV shows: episode detection from folders and file names, season posters, episode stills, a countdown to the next
   episode, Blu-ray discs whose chapters are episodes.
+- **Folders view** for those who prefer folders to a poster wall: the sources' folders and files as a list, the file
+  name first and the library's title, year, size, length, badges and watched / resume marks with it, and a preview
+  beside it. Films play with their resume point, an album plays from the song you pick, photos open in the viewer.
+- **Choose the top menu's tabs:** keep only Movies, or any set of walls (Settings → Appearance → Menu tabs).
 
 ### Playback
 - **Dolby Vision profile 7 FEL with its full enhancement layer**, composited on the GPU on the S928X and by the
@@ -46,6 +50,13 @@ of the S905X4) and 3D Blu-ray (MVC) in frame packing.
 - Blu-ray folders and ISO images open with the menus of the player's own Blu-ray player (HDMV and BD-J); when the
   main movie starts, CineFuze takes over.
 - Favourite scenes: mark the start and end while a film plays; scene cards and a timeline on the detail page.
+
+### Live TV (IPTV)
+- Your provider's **M3U playlist** (URL or file) or **Xtream Codes** login, with its **XMLTV programme guide**.
+- Channel list by group with logos and what is on now; now and next with descriptions; favourites.
+- Zapping with Up / Down, P+ / P- or the channel number, a now / next bar, audio and subtitle tracks, automatic
+  reconnect, refresh-rate switching.
+- CineFuze contains no channels: it plays the playlist you add.
 
 ### Photos and music
 - Photo wall with dates and places (EXIF), a full-screen viewer with a map of where the photo was taken.
@@ -78,6 +89,11 @@ the video plane; the film frame behind the controls is taken from the same file 
 | ![2.39:1](screenshots/layout-scope.jpg)<br><sub>Highlight layout for 2.39:1 screens</sub> | ![Settings](screenshots/settings.jpg)<br><sub>Settings</sub> |
 | ![Photos](screenshots/photos.jpg)<br><sub>Photo wall with dates and places</sub> | ![Slideshow](screenshots/slideshow.jpg)<br><sub>Slideshow, Polaroid style</sub> |
 | ![Album](screenshots/album.jpg)<br><sub>Album page with cover and disc art</sub> | ![Music player](screenshots/music.jpg)<br><sub>Music player with the spectrum visualizer</sub> |
+| ![Folders view](screenshots/folders.jpg)<br><sub>Folders view: file names, the library's facts, the preview</sub> | ![Menu tabs](screenshots/menu-tabs.jpg)<br><sub>Choosing the top menu's tabs</sub> |
+
+![Live TV](screenshots/live-tv.jpg)
+<sub>Live TV: groups, channels with what is on now, now and next. (A public playlist from iptv-org with an
+epgshare01 guide; the programme texts are the guide's, in Hungarian.)</sub>
 
 ## Requirements
 - A Dune HD or R_volution player with an Amlogic S928X, or a Dune HD player with an Amlogic S905X4.
@@ -95,7 +111,7 @@ The APK is under [Releases](https://github.com/djnice/cinefuze/releases). Instal
 ## Credits
 This product uses the TMDB API but is not endorsed or certified by TMDB. Disc art from fanart.tv, music metadata
 from MusicBrainz and the Cover Art Archive, maps © OpenStreetMap contributors. Video playback by VLC (libVLC).
-Film artwork in the screenshots belongs to its owners.
+Film artwork and channel logos in the screenshots belong to their owners.
 
 Dolby, Dolby Vision, Dolby Atmos and Dolby TrueHD are trademarks of Dolby Laboratories; DTS, DTS-HD and DTS:X are
 trademarks of DTS, Inc.; Dune HD and R_volution are trademarks of their owners. CineFuze is not affiliated with any
