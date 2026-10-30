@@ -109,6 +109,16 @@ epgshare01 guide; the programme texts are the guide's, in Hungarian.)</sub>
 The APK is under [Releases](https://github.com/djnice/cinefuze/releases). Install it like any other APK on the box
 (from a USB stick or a network share); a newer APK installs over the old one and keeps the library.
 
+- CineFuze is a complete player on its own, with its own FEL playback library: VLC FEL is not needed. VLC FEL is a
+  separate app (VLC with FEL); the two can be installed side by side, neither needs the other.
+- It does not touch the Dune HD firmware's own player. On r25 the Dune HD plugin (`dune_plugin_s928x_dvfel`) loads
+  the FEL kernel module at boot; CineFuze uses that module and installs nothing (no module, no boot script, no root
+  question), so FEL in the Dune HD player works as before. The two are updated separately: the plugin from the
+  [vlc-fel-android releases](https://github.com/djnice/vlc-fel-android/releases) (for the Dune HD player), CineFuze
+  with a newer APK.
+- CineFuze appears as one more app among the box's apps: start it from there, and the Home button takes you back to
+  the Dune HD shell. It does not replace the launcher and has no start-at-boot option of its own.
+
 ## Related projects
 - [vlc-fel-android](https://github.com/djnice/vlc-fel-android) – the libVLC patches, the `dvfel` kernel module and
   `libdvfelplay` that CineFuze plays Dolby Vision FEL with, the 3D MVC decoding (GPL), and the Dune HD plugin.
