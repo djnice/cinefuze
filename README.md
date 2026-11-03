@@ -3,16 +3,17 @@
 **A media center for Android TV boxes with Dolby Vision FEL and 3D Blu-ray (MVC)** – built for the Dune HD and
 R_volution players with an Amlogic S928X and the Dune HD players with an Amlogic S905X4, on its own libVLC build that
 plays the full enhancement layer of Dolby Vision profile 7 (composited on the GPU of the S928X, by the Dolby Vision core
-of the S905X4) and 3D Blu-ray (MVC) in frame packing.
+of the S905X4) and 3D Blu-ray (MVC) in frame packing. It also runs on Dune HD boxes with Homatics firmware, there
+without Dolby Vision FEL.
 
 [![Sponsor](https://img.shields.io/badge/Sponsor-%E2%98%95%20buy%20me%20a%20coffee-ea4aaa?logo=githubsponsors&logoColor=white)](https://github.com/sponsors/djnice)
 
 ![Movies wall](screenshots/movies.jpg)
 
-> **Preview.** CineFuze is in beta. It runs on every S928X player of Dune HD and R_volution; it is tested on the
-> Dune HD Pro 8K Plus, Pro One 8K Plus and the R_volution PlayerPro 8K. Dolby Vision FEL on the S905X4 is new (since
-> 0.8.0-beta2) and tested on the Dune HD Pro Vision 4K (firmware r24). This repository presents the app and hosts its
-> APK under [Releases](https://github.com/djnice/cinefuze/releases).
+> **CineFuze 1.0** is out. It runs on every S928X player of Dune HD and R_volution; it is tested on the Dune HD Pro
+> 8K Plus, Pro One 8K Plus and the R_volution PlayerPro 8K (S928X), the Dune HD Pro Vision 4K (S905X4, firmware r24
+> and r25) and the Dune HD Premier 4K Pro with Homatics firmware (Android 14, no Dolby Vision FEL). This repository
+> presents the app and hosts its APK under [Releases](https://github.com/djnice/cinefuze/releases).
 
 ## Features
 
@@ -24,6 +25,7 @@ of the S905X4) and 3D Blu-ray (MVC) in frame packing.
 - Media info read from the files themselves: resolution, HDR10 / HDR10+ / HLG, Dolby Vision profile and FEL / MEL,
   MaxCLL / MaxFALL and the RPU's L6, Atmos / DTS:X / DTS-HD MA audio, subtitles, chapters.
 - Watched marks, resume points and favourite scenes shared between boxes through the NAS.
+- The interface in English, Hungarian and Russian.
 
 ### Browsing
 - Four wall layouts: Highlight (the selected title large), Full wall, Large posters, and 2.39:1 variants for scope
@@ -47,8 +49,13 @@ of the S905X4) and 3D Blu-ray (MVC) in frame packing.
 - Automatic refresh-rate switching, seek previews (made in the background), chapters, audio / subtitle panels, an
   INFO panel with the live Dolby Vision levels, and a FEL demo mode on the S928X (split screen: FEL vs. the base
   layer).
-- Blu-ray folders and ISO images open with the menus of the player's own Blu-ray player (HDMV and BD-J); when the
-  main movie starts, CineFuze takes over.
+- **Blu-ray folders and ISO images:** you choose how a disc starts – with its menu in the player's own Blu-ray player
+  (HDMV and BD-J; when the main movie starts, CineFuze takes over, over SMB or NFS), or without the menu, straight into
+  the main movie in CineFuze; a film can resume without the menu too.
+- **Audio and subtitle languages:** the languages a film starts with, a "forced subtitles only" mode as in Kodi, and
+  the tracks you switch to are remembered for each film (each episode).
+- The Dune HD player can be chosen instead: films and episodes then play in the Dune HD's own player (its OSD), with
+  the resume point saved; a disc starts with its menu or in lite mode.
 - Favourite scenes: mark the start and end while a film plays; scene cards and a timeline on the detail page.
 
 ### Live TV (IPTV)
@@ -74,6 +81,10 @@ of the S905X4) and 3D Blu-ray (MVC) in frame packing.
 - R_volution players are handled the same way.
 - S905X4 (Dune HD r24; r22 not tested): CineFuze installs its S905X4 kernel module with the first FEL film, the same
   way. 3D MVC is not tested there yet.
+- Dune HD boxes with Homatics firmware (the Dune HD app on Android 14): **no Dolby Vision FEL** (there is no root
+  access for the kernel module); everything else plays. The Dune HD app's player can be chosen, TrueHD is decoded by
+  the TV / amplifier or by the box (a setting), Dolby Vision films get black letterbox bars, and the refresh rate
+  follows Android's "match content frame rate" setting.
 
 ## Screenshots
 
@@ -91,6 +102,7 @@ the video plane; the film frame behind the controls is taken from the same file 
 | ![Photos](screenshots/photos.jpg)<br><sub>Photo wall with dates and places</sub> | ![Slideshow](screenshots/slideshow.jpg)<br><sub>Slideshow, Polaroid style</sub> |
 | ![Album](screenshots/album.jpg)<br><sub>Album page with cover and disc art</sub> | ![Music player](screenshots/music.jpg)<br><sub>Music player with the spectrum visualizer</sub> |
 | ![Folders view](screenshots/folders.jpg)<br><sub>Folders view: file names, the library's facts, the preview</sub> | ![Menu tabs](screenshots/menu-tabs.jpg)<br><sub>Choosing the top menu's tabs</sub> |
+| ![Full-screen wall](screenshots/1.0-RC3/01-fullscreen-wall.jpg)<br><sub>Full-screen wall</sub> | ![INFO panel](screenshots/1.0-RC3/16-info-panel.jpg)<br><sub>INFO panel: the stream, Dolby Vision, the audio</sub> |
 
 ![Piano lights visualizer](screenshots/music-piano.jpg)
 <sub>The music player's piano lights visualizer: rainbow silk waves and spikes over a keyboard whose keys light up
@@ -101,14 +113,18 @@ with their own frequency band.</sub>
 epgshare01 guide; the programme texts are the guide's, in Hungarian.)</sub>
 
 ## Requirements
-- A Dune HD or R_volution player with an Amlogic S928X, or a Dune HD player with an Amlogic S905X4.
-- Android 11, 32-bit (armeabi-v7a) userspace.
+- A Dune HD or R_volution player with an Amlogic S928X, or a Dune HD player with an Amlogic S905X4 (Dune HD or
+  Homatics firmware).
+- Android 11 or newer, 32-bit (armeabi-v7a) userspace.
 - Media on a NAS / PC (SMB) or a drive connected to the box.
 
 ## Download
 The APK is under [Releases](https://github.com/djnice/cinefuze/releases). Install it like any other APK on the box
 (from a USB stick or a network share); a newer APK installs over the old one and keeps the library.
 
+- **Updates (from 1.0):** at its start CineFuze looks for a newer release here and offers it with its changelog;
+  Settings → About shows the version and checks by hand. The first time, Android asks you to allow CineFuze to install
+  apps.
 - CineFuze is a complete player on its own, with its own FEL playback library: VLC FEL is not needed. VLC FEL is a
   separate app (VLC with FEL); the two can be installed side by side, neither needs the other.
 - It does not touch the Dune HD firmware's own player. On r25 the Dune HD plugin (`dune_plugin_s928x_dvfel`) loads
