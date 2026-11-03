@@ -1,7 +1,7 @@
 # CineFuze
 
 **A media center for Android TV boxes with Dolby Vision FEL and 3D Blu-ray (MVC)** – built for the Dune HD and
-R_volution players with an Amlogic S928X and the Dune HD players with an Amlogic S905X4, on its own libVLC build that
+R_volution players with an Amlogic S928X or S905X4, on its own libVLC build that
 plays the full enhancement layer of Dolby Vision profile 7 (composited on the GPU of the S928X, by the Dolby Vision core
 of the S905X4) and 3D Blu-ray (MVC) in frame packing. It also runs on Dune HD boxes with Homatics firmware, there
 without Dolby Vision FEL.
@@ -12,8 +12,9 @@ without Dolby Vision FEL.
 
 > **CineFuze 1.0** is out. It runs on every S928X player of Dune HD and R_volution; it is tested on the Dune HD Pro
 > 8K Plus, Pro One 8K Plus and the R_volution PlayerPro 8K (S928X), the Dune HD Pro Vision 4K (S905X4, firmware r24
-> and r25) and the Dune HD Premier 4K Pro with Homatics firmware (Android 14, no Dolby Vision FEL). This repository
-> presents the app and hosts its APK under [Releases](https://github.com/djnice/cinefuze/releases).
+> and r25; the S905X4 players of R_volution are not tested yet) and the Dune HD Premier 4K Pro with Homatics
+> firmware (Android 14, no Dolby Vision FEL). This repository presents the app and hosts its APK under
+> [Releases](https://github.com/djnice/cinefuze/releases).
 
 ## Features
 
@@ -80,7 +81,7 @@ without Dolby Vision FEL.
   Newer modules come as a Dune HD plugin from [vlc-fel-android](https://github.com/djnice/vlc-fel-android/releases).
 - R_volution players are handled the same way.
 - S905X4 (Dune HD r24; r22 not tested): CineFuze installs its S905X4 kernel module with the first FEL film, the same
-  way. 3D MVC is not tested there yet.
+  way. 3D MVC is not tested there yet. R_volution's S905X4 players should work the same way, but are not tested yet.
 - Dune HD boxes with Homatics firmware (the Dune HD app on Android 14): **no Dolby Vision FEL** (there is no root
   access for the kernel module); everything else plays. The Dune HD app's player can be chosen, TrueHD is decoded by
   the TV / amplifier or by the box (a setting), Dolby Vision films get black letterbox bars, and the refresh rate
@@ -113,8 +114,7 @@ with their own frequency band.</sub>
 epgshare01 guide; the programme texts are the guide's, in Hungarian.)</sub>
 
 ## Requirements
-- A Dune HD or R_volution player with an Amlogic S928X, or a Dune HD player with an Amlogic S905X4 (Dune HD or
-  Homatics firmware).
+- A Dune HD or R_volution player with an Amlogic S928X or S905X4 (a Dune HD with Dune HD or Homatics firmware).
 - Android 11 or newer, 32-bit (armeabi-v7a) userspace.
 - Media on a NAS / PC (SMB) or a drive connected to the box.
 
