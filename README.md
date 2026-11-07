@@ -10,6 +10,12 @@ without Dolby Vision FEL.
 
 ![Movies wall](screenshots/movies.jpg)
 
+> **New in CineFuze 1.2:** [add-ons](#add-ons) – Stremio add-ons and CineFuze add-on files bring catalogs, search
+> and playback from the web ([write your own](ADDONS.md)); add-ons' movies open on the movie page with the trailer,
+> extras, cast and IMDb's technical specs; your own categories with sources of their own that stay off the main
+> walls; movies and TV shows in one source, told apart by themselves; the Watching tab first; Skiptro intro skipping;
+> subtitle color; the interface in German, French, Spanish and Swedish too; sources that refresh by themselves.
+
 > **CineFuze 1.0** is out. It runs on every S928X player of Dune HD and R_volution; it is tested on the Dune HD Pro
 > 8K Plus, Pro One 8K Plus and the R_volution PlayerPro 8K (S928X), the Dune HD Pro Vision 4K (S905X4, firmware r24
 > and r25; the S905X4 players of R_volution are not tested yet) and the Dune HD Premier 4K Pro with Homatics
@@ -22,11 +28,19 @@ without Dolby Vision FEL.
 - Sources: SMB shares (NAS, PC) and the box's own drives (USB, internal HDD); network browsing (NetBIOS, mDNS) that
   reuses the logins the player's firmware has saved.
 - Movies, TV shows, other videos, photos and music, each with its own wall – or all of them as folders.
+- **Your own categories** (Kids, Concerts, Documentaries …): a type and the sources it comes from, a tab of its own in
+  the top menu if you like. A source can be **categories only**, so its titles stay off the main walls; a new source
+  can be added right in a category.
+- **Movies and TV shows in one source:** episodes are told apart by their names (S01E02, 1x02, Season 1 …), their
+  folders and TMDB; whatever it gets wrong can be set by hand from the item's menu.
+- Sources refresh by themselves when files change on the server (SMB change notifications while the app is open, a
+  regular check otherwise); an unplugged drive's titles leave the walls and come back with it.
 - Metadata from TMDB in 17 languages (titles, plots, posters, backdrops, title logos), disc art from fanart.tv.
 - Media info read from the files themselves: resolution, HDR10 / HDR10+ / HLG, Dolby Vision profile and FEL / MEL,
   MaxCLL / MaxFALL and the RPU's L6, Atmos / DTS:X / DTS-HD MA audio, subtitles, chapters.
-- Watched marks, resume points and favourite scenes shared between boxes through the NAS.
-- The interface in English, Hungarian and Russian.
+- Watched marks, resume points and favorite scenes shared between boxes through the NAS.
+- The interface in English, Hungarian, Russian, German, French, Spanish and Swedish (Settings → Appearance; the
+  last four machine translated – corrections are welcome).
 
 ### Browsing
 - Four wall layouts: Highlight (the selected title large), Full wall, Large posters, and 2.39:1 variants for scope
@@ -38,8 +52,10 @@ without Dolby Vision FEL.
   episode, Blu-ray discs whose chapters are episodes.
 - **Folders view** for those who prefer folders to a poster wall: the sources' folders and files as a list, the file
   name first and the library's title, year, size, length, badges and watched / resume marks with it, and a preview
-  beside it. Films play with their resume point, an album plays from the song you pick, photos open in the viewer.
+  beside it. Movies play with their resume point, an album plays from the song you pick, photos open in the viewer.
 - **Choose the top menu's tabs:** keep only Movies, or any set of walls (Settings → Appearance → Menu tabs).
+- **Watching** comes first: the movies and TV shows you left part way, the latest first – from the library and from
+  add-ons.
 
 ### Playback
 - **Dolby Vision profile 7 FEL with its full enhancement layer**, composited on the GPU on the S928X and by the
@@ -52,16 +68,29 @@ without Dolby Vision FEL.
   layer).
 - **Blu-ray folders and ISO images:** you choose how a disc starts – with its menu in the player's own Blu-ray player
   (HDMV and BD-J; when the main movie starts, CineFuze takes over, over SMB or NFS), or without the menu, straight into
-  the main movie in CineFuze; a film can resume without the menu too.
-- **Audio and subtitle languages:** the languages a film starts with, a "forced subtitles only" mode as in Kodi, and
-  the tracks you switch to are remembered for each film (each episode).
-- The Dune HD player can be chosen instead: films and episodes then play in the Dune HD's own player (its OSD), with
+  the main movie in CineFuze; a movie can resume without the menu too.
+- **Audio and subtitle languages:** the languages a movie starts with, a "forced subtitles only" mode as in Kodi, and
+  the tracks you switch to are remembered for each movie (each episode).
+- The Dune HD player can be chosen instead: movies and episodes then play in the Dune HD's own player (its OSD), with
   the resume point saved; a disc starts with its menu or in lite mode.
-- Favourite scenes: mark the start and end while a film plays; scene cards and a timeline on the detail page.
+- Favorite scenes: mark the start and end while a movie plays; scene cards and a timeline on the detail page.
+- **Skiptro:** a TV episode with its `.skiptro.json` beside it shows "OK: skip the intro" while the intro runs.
+- Subtitle color (white, yellow, green, cyan, orange, light gray) and size.
+
+### Add-ons
+- **Stremio add-ons** by their manifest address (Cinemeta, for example): their catalogs as walls with search,
+  year and genre pickers; stream add-ons give the sources a title plays from.
+- **CineFuze add-on files:** a JSON file that maps a website's own API to catalogs, item pages and streams – logins,
+  multi-step streams and Widevine DRM included, no code. How to write one: **[ADDONS.md](ADDONS.md)**.
+- A movie an add-on knows by its IMDb id opens on the **movie page**: TMDB's artwork and texts in your language, the
+  trailer, extras and cast, and **IMDb's technical specs** (sound mix, aspect ratio, camera, negative, process) in the
+  technical card.
+- Add-ons are added in Settings → Add-ons (an address, an `smb://` path or a file on the box), each can have a tab of
+  its own; adult add-ons ask once before they open.
 
 ### Live TV (IPTV)
 - Your provider's **M3U playlist** (URL or file) or **Xtream Codes** login, with its **XMLTV programme guide**.
-- Channel list by group with logos and what is on now; now and next with descriptions; favourites.
+- Channel list by group with logos and what is on now; now and next with descriptions; favorites.
 - Zapping with Up / Down, P+ / P- or the channel number, a now / next bar, audio and subtitle tracks, automatic
   reconnect, refresh-rate switching.
 - CineFuze contains no channels: it plays the playlist you add.
@@ -76,27 +105,34 @@ without Dolby Vision FEL.
 
 ### On the player's firmware
 - Firmware without the Dolby Vision FEL module (Dune HD r22 / r24): the kernel module is installed with the first
-  FEL film (it asks once if root access is off, and switches it back off).
+  FEL movie (it asks once if root access is off, and switches it back off).
 - Firmware with the module (Dune HD r25): the firmware brings it itself; CineFuze uses it and installs nothing.
   Newer modules come as a Dune HD plugin from [vlc-fel-android](https://github.com/djnice/vlc-fel-android/releases).
 - R_volution players are handled the same way.
-- S905X4 (Dune HD r24; r22 not tested): CineFuze installs its S905X4 kernel module with the first FEL film, the same
+- S905X4 (Dune HD r24; r22 not tested): CineFuze installs its S905X4 kernel module with the first FEL movie, the same
   way. 3D MVC is not tested there yet. R_volution's S905X4 players should work the same way, but are not tested yet.
 - Dune HD boxes with Homatics firmware (the Dune HD app on Android 14): **no Dolby Vision FEL** (there is no root
   access for the kernel module); everything else plays. The Dune HD app's player can be chosen, TrueHD is decoded by
-  the TV / amplifier or by the box (a setting), Dolby Vision films get black letterbox bars, and the refresh rate
+  the TV / amplifier or by the box (a setting), Dolby Vision movies get black letterbox bars, and the refresh rate
   follows Android's "match content frame rate" setting.
 
 ## Screenshots
 
+New in 1.2:
+
+| | |
+|---|---|
+| ![Add-ons](screenshots/1.2/addons-cinemeta.jpg)<br><sub>Add-ons: a Stremio catalog (Cinemeta) with its chips, search and genre picker</sub> | ![Add-on movie page](screenshots/1.2/addon-movie-page.jpg)<br><sub>An add-on's movie on the movie page, with IMDb's technical specs</sub> |
+| ![Own category](screenshots/1.2/own-category.jpg)<br><sub>An own category (Kids) in the top menu, Watching first</sub> | ![Categories only](screenshots/1.2/categories-only.jpg)<br><sub>Categories: a source "categories only", a new source right in the category</sub> |
+
 ![Playback with seek preview](screenshots/playback.jpg)
 <sub>Playback: chapters, Dolby Vision P7 FEL, the seek preview while scrubbing. (The box's screen capture leaves out
-the video plane; the film frame behind the controls is taken from the same file at the same time.)</sub>
+the video plane; the movie frame behind the controls is taken from the same file at the same time.)</sub>
 
 | | |
 |---|---|
 | ![Detail page](screenshots/detail.jpg)<br><sub>Detail page: title logo, the trailer in a soft-edged window, the technical card (Dolby Vision P7 FEL)</sub> | ![Technical card](screenshots/techinfo.jpg)<br><sub>MaxCLL / MaxFALL and the RPU's L6, the audio tracks with Atmos</sub> |
-| ![Favourite scenes](screenshots/scenes.jpg)<br><sub>Favourite scenes: cards, the film's timeline, play / loop</sub> | ![Extras](screenshots/extras.jpg)<br><sub>Extras: trailers and the soundtrack</sub> |
+| ![Favorite scenes](screenshots/scenes.jpg)<br><sub>Favorite scenes: cards, the movie's timeline, play / loop</sub> | ![Extras](screenshots/extras.jpg)<br><sub>Extras: trailers and the soundtrack</sub> |
 | ![Cast](screenshots/cast.jpg)<br><sub>Cast biography</sub> | ![TV show](screenshots/tvshow.jpg)<br><sub>TV show: seasons, episode stills, watched marks</sub> |
 | ![Full wall](screenshots/layout-wall.jpg)<br><sub>Full wall layout</sub> | ![Large posters](screenshots/layout-large.jpg)<br><sub>Large posters layout</sub> |
 | ![2.39:1](screenshots/layout-scope.jpg)<br><sub>Highlight layout for 2.39:1 screens</sub> | ![Settings](screenshots/settings.jpg)<br><sub>Settings</sub> |
@@ -142,7 +178,7 @@ The APK is under [Releases](https://github.com/djnice/cinefuze/releases). Instal
 ## Credits
 This product uses the TMDB API but is not endorsed or certified by TMDB. Disc art from fanart.tv, music metadata
 from MusicBrainz and the Cover Art Archive, maps © OpenStreetMap contributors. Video playback by VLC (libVLC).
-Film artwork and channel logos in the screenshots belong to their owners.
+Movie artwork and channel logos in the screenshots belong to their owners.
 
 Dolby, Dolby Vision, Dolby Atmos and Dolby TrueHD are trademarks of Dolby Laboratories; DTS, DTS-HD and DTS:X are
 trademarks of DTS, Inc.; Dune HD and R_volution are trademarks of their owners. CineFuze is not affiliated with any
