@@ -207,7 +207,7 @@ CineFuze implements the client side of the Stremio protocol for the resources `c
 |---|---|
 | `id`, `name` | Required. `id` identifies the add-on (updates replace by `id`). |
 | `version`, `description` | Shown in Settings. |
-| `logo` | Read, not currently shown. |
+| `logo` | An absolute `http(s)` address of the add-on's logo, shown in Settings → Add-ons and on the add-on's chip. PNG, JPEG, WebP, GIF, ICO or SVG (an SVG is drawn on a see-through background). An element of an SVG sprite by its id after `#`: `https://host/sprite.svg#logo-id` (a `<symbol>`, `<g>` or `<svg>` with that `id`). The logo is drawn at the chip's height and as wide as its shape, up to four times its height. |
 | `types` | Shown in Settings; the default types of every resource. |
 | `resources` | Strings (`"stream"`) or objects (`{"name": "stream", "types": [...], "idPrefixes": [...]}`). Only `meta` and `stream` are checked; catalogs are used whether or not `catalog` is listed. `subtitles` and `addon_catalog` are not used. |
 | `idPrefixes` | The ids the resources are for. An empty list, or a list of empty strings, means any id. A resource's own `types` / `idPrefixes` take precedence over the manifest's. |

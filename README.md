@@ -10,6 +10,9 @@ without Dolby Vision FEL.
 
 ![Movies wall](screenshots/movies.jpg)
 
+> **CineFuze 1.2.1:** Blu-ray movies made of several clips play in one piece without the disc menu too; the Live TV
+> archive (catch-up); add-on logos as SVG too.
+
 > **New in CineFuze 1.2:** [add-ons](#add-ons) – Stremio add-ons and CineFuze add-on files bring catalogs, search
 > and playback from the web ([write your own](ADDONS.md)); add-ons' movies open on the movie page with the trailer,
 > extras, cast and IMDb's technical specs; your own categories with sources of their own that stay off the main
@@ -93,6 +96,9 @@ without Dolby Vision FEL.
 - Channel list by group with logos and what is on now; now and next with descriptions; favorites.
 - Zapping with Up / Down, P+ / P- or the channel number, a now / next bar, audio and subtitle tracks, automatic
   reconnect, refresh-rate switching.
+- **Archive (catch-up):** channels with an archive in the playlist (`tvg-rec`, `catchup`, `catchup-source`) or on
+  the Xtream server get an ARCHIVE tag; Right opens the past days' programs, OK plays one from its start, with
+  seeking and the next / previous program.
 - CineFuze contains no channels: it plays the playlist you add.
 
 ### Photos and music
