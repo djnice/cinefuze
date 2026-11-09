@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The focused option's description at the bottom of the settings pages (issue #25): one sentence, two lines at most -->
+<resources>
+    <!-- Settings: Library -->
+    <string name="help_sources">Where your movies, TV shows, music and photos are: network shares (NAS, PC) and the box\'s own drives. Add a folder once, CineFuze scans it.</string>
+    <string name="help_addons">Extra catalogs and streams from the internet: Stremio add-ons or CineFuze add-on files. They show in the Add-ons tab.</string>
+    <string name="help_tmdb_lang">Changing it downloads the titles, plots and posters of the whole library again, in the new language.</string>
+    <string name="help_categories">Your own walls, such as Kids or Concerts, made of the sources you pick; each can have a tab of its own in the top menu.</string>
+    <!-- Appearance -->
+    <string name="help_layout">How the movies and TV shows walls look. Pick the one that suits your screen; you can change it back any time.</string>
+    <string name="help_full_wall">More room for the posters: the top menu stays hidden until you press Up on the first row or Back.</string>
+    <string name="help_group_collections">Keeps the movies wall shorter: the parts of a series take one tile instead of one tile each.</string>
+    <string name="help_tabs">Hide the tabs you never use (Music or Photos, say) to keep the top menu short; your own categories can be shown here too.</string>
+    <string name="help_ui_lang">The language of CineFuze\'s menus, whatever the box\'s own language is. The movie data\'s language is the TMDB language.</string>
+    <!-- Playback -->
+    <string name="help_fel_demo">For comparing: shows what the Dolby Vision FEL layer adds to the picture. Leave it off for normal watching.</string>
+    <string name="help_mvc_decoder">How 3D Blu-ray movies (MVC) are decoded on this box. Software is the default; switch if a 3D movie does not play well.</string>
+    <string name="help_audio_lang">Pick your language and movies start with that audio track whenever the file has one.</string>
+    <string name="help_sub_lang">Pick a language to get its subtitles from the start, or Off for no subtitles at all.</string>
+    <string name="help_sub_forced">Handy when you understand the movie\'s language: you still get subtitles for the lines spoken in other languages.</string>
+    <string name="help_sub_size">Bigger subtitles for a seat far from the screen, or smaller ones that cover less of the picture.</string>
+    <string name="help_sub_bg">A background behind the subtitle lines keeps them readable on bright scenes.</string>
+    <string name="help_sub_color">The color of text subtitles (SRT and the like); some find yellow easier to read than white.</string>
+    <string name="help_iphone_dv">Only videos shot on an iPhone in Dolby Vision are affected; movies are not.</string>
+    <string name="help_trickplay">The small pictures over the seek bar while you skip forward or back in a movie.</string>
+    <string name="help_trailer_auto">On: a movie\'s page plays its trailer in the background, as streaming services do. Off: a quiet page.</string>
+    <string name="help_trailer_volume">Turn it down if the trailers are too loud while you browse.</string>
+    <string name="help_player">Which player plays your movies: CineFuze\'s own, or the Dune\'s built-in player with its own menus and settings.</string>
+    <!-- Audio -->
+    <string name="help_passthrough">Turn it on when an AV receiver or a soundbar decodes the sound. Turn it off if you hear nothing or noise.</string>
+    <string name="help_passthrough_formats">Turn off a format your receiver does not handle well: that format then plays as PCM.</string>
+    <string name="help_truehd_decode">Pick the box if TrueHD movies are silent; pick the TV / amplifier for Dolby Atmos.</string>
+    <string name="help_music_native_rate">For hi-res music: the receiver gets each track at its own sample rate. Turn it off if your receiver has trouble with it.</string>
+    <!-- Photos -->
+    <string name="help_slideshow">How the photos change in the slideshow. The list shows each style live, with your newest photos.</string>
+    <string name="help_slideshow_music">Music while the slideshow plays, from your own music library.</string>
+    <string name="help_slideshow_sepia">An old-film look for the slideshow; your photos themselves are not changed.</string>
+    <!-- Sync -->
+    <string name="help_sync">With more boxes at home: a movie stopped on one continues on the other where you left off.</string>
+    <string name="help_box_name">The name the other boxes list this box under in their sync status.</string>
+    <!-- About -->
+    <string name="help_about_home">News, release notes, questions and bug reports (Issues) on GitHub.</string>
+    <string name="help_about_update">CineFuze also looks by itself at start; here you can look right now and install the new version.</string>
+
+    <!-- Sources -->
+    <string name="help_refresh_library">Scans every source again now: new files show up, deleted ones go. Needed only for sources without auto refresh.</string>
+    <string name="help_restore_hidden">Brings back the movies and TV shows you hid from the walls.</string>
+    <string name="help_live_playlists">Your IPTV playlists (M3U, Xtream Codes, One TV) for the Live TV tab.</string>
+    <string name="help_auto_refresh">On: new and deleted files in this folder show on the walls by themselves, with no Refresh the library needed.</string>
+    <string name="help_category_only">On: the folder\'s movies and TV shows show only in the categories that use it (Kids, say), not on the main Movies, TV shows walls.</string>
+    <string name="help_nfs_export">For Blu-ray folders and ISOs: the Dune\'s own Blu-ray player opens them over NFS. Empty: the share\'s name is used.</string>
+    <string name="help_browse_network">Finds the SMB servers (NAS, PC) on the network: open a folder and add it with its type of content.</string>
+    <string name="help_browse_local">A USB drive or disk in the box: open a folder and add it with its type of content.</string>
+    <string name="help_source_content">What the folder holds: movies, TV shows, other videos, photos or music. OK changes it.</string>
+    <string name="help_test_connection">Checks the server, the share and the login before you add the source.</string>
+    <!-- Categories -->
+    <string name="help_category_open">Opens the category\'s wall, even when it has no tab in the top menu.</string>
+    <string name="help_category_edit">Loads the category into the form below: change its name, type or sources, then Save.</string>
+    <string name="help_category_in_menu">On: the category has a tab of its own in the top menu. Off: open it from this page.</string>
+    <string name="help_category_type">What the category shows: movies, TV shows, other videos, photos or music. Only the sources that hold it are listed.</string>
+    <string name="help_category_pick">✓: the titles of this source are in the category. A category can take them from several sources.</string>
+    <string name="help_category_browse">Adds a new folder right to this category, set to Categories only: its titles stay off the main walls.</string>
+    <!-- Add-ons -->
+    <string name="help_addon_enabled">Off: the add-on stays installed, but its catalogs and streams are not used.</string>
+    <string name="help_addon_own_tab">On: the add-on\'s catalogs get a tab of their own in the top menu instead of being in the Add-ons tab.</string>
+    <string name="help_addon_up">Moves it one place up: the add-ons higher in the list come first.</string>
+    <string name="help_addon_update">Loads the add-on again from its address, with its newest catalogs.</string>
+    <string name="help_addon_login">Some add-ons play only with your account at their service (a subscription, say).</string>
+    <string name="help_addon_url">Type the add-on\'s address, or pick an add-on file with the buttons below.</string>
+    <string name="help_addon_browse">Picks a CineFuze add-on file from a network share or from the box\'s drives.</string>
+    <!-- Live TV playlists -->
+    <string name="help_live_refresh">Loads the channels and the program guide of every playlist again now.</string>
+    <string name="help_live_archive">How past programs are asked from the provider. Leave it on automatic; try another one if the archive does not play.</string>
+    <string name="help_live_type">M3U: a playlist address from your provider. Xtream Codes: a server with a user and a password. One TV: your One account.</string>
+    <string name="help_live_epg">The program guide\'s address (XMLTV), if your provider gives it apart from the playlist.</string>
+    <string name="help_live_test">Loads the channels once to check the address and the login, without adding the playlist.</string>
+</resources>

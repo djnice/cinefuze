@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- sound as a bitstream on HDMI (AudioOut) -->
+    <string name="set_passthrough">Bitstream-ljud (passthrough)</string>
+    <string name="set_passthrough_hint">Förstärkaren avkodar Dolby- och DTS-ljud (även Atmos, DTS:X); av: spelaren avkodar det till PCM. Från nästa uppspelning.</string>
+    <string name="set_passthrough_formats">Bitstream-format</string>
+    <string name="set_passthrough_formats_hint">Formaten som skickas som bitstream när HDMI-enheten tar emot dem; de andra spelas som PCM.</string>
+    <string name="set_passthrough_sink">HDMI-enheten tar emot: %1$s</string>
+    <string name="set_passthrough_sink_none">HDMI-enheten tar inte emot något bitstream-format (eller så är det okänt)</string>
+    <string name="set_passthrough_none">inget</string>
+    <string name="set_passthrough_unsupported">%1$s (HDMI-enheten tar inte emot det)</string>
+    <string name="set_truehd_decode">TrueHD avkodas av</string>
+    <string name="set_truehd_decode_sink">TV:n / förstärkaren (Atmos)</string>
+    <string name="set_truehd_decode_box">boxen</string>
+    <string name="set_truehd_decode_hint">TV:n / förstärkaren: Dolby Atmos där den tar emot TrueHD (tyst där den inte gör det: välj boxen). Boxen: hörs alltid, utan Atmos. Från nästa uppspelning.</string>
+    <string name="passthrough_formats_close">Klart</string>
+    <string name="audio_out_bitstream">Bitstream · %1$s</string>
+    <string name="audio_out_pcm">PCM · %1$d kanaler · %2$.1f kHz</string>
+    <string name="audio_out_box_wraps">paketeras av boxen</string>
+    <string name="osd_bitstream">bitstream</string>
+    <string name="osd_audio_delay">Ljudfördröjning</string>
+    <string name="info_audio_out">Ljudutgång</string>
+    <string name="info_codec">Kodek</string>
+    <string name="info_channels">Kanaler</string>
+    <string name="info_sample_rate">Samplingsfrekvens</string>
+    <string name="info_khz">%1$s kHz</string>
+    <string name="info_language">Språk</string>
+    <string name="set_music_native_rate">Musik i sin egen samplingsfrekvens</string>
+    <string name="set_music_native_rate_hint">Musikspelaren skickar stereo i 44,1, 96 och 192 kHz oförändrat till HDMI (16 bitar), utan omvandling till 48 kHz. Av: 48 kHz som tidigare. Från nästa spår.</string>
+    <string name="set_zidoo_multichannel">Flerkanalsmusik via Zidoo-motorn (experimentell)</string>
+    <string name="set_zidoo_multichannel_hint">En flerkanals-DSD-fil på en enhet i boxen (USB) går ändå till Zidoo-motorn; påslaget även övriga flerkanalsspår (5.1 FLAC) – den tar dem bara med Zidoos egna flerkanals-/SACD-inställningar. Av: de spelas via Android (som PCM), som i Zidoos musikapp med raw-utgång.</string>
+</resources>

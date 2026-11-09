@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The focused option's description at the bottom of the settings pages (issue #25): one sentence, two lines at most -->
+<resources>
+    <!-- Settings: Library -->
+    <string name="help_sources">你的电影、剧集、音乐和照片所在位置：网络共享（NAS、电脑）和盒子自身的存储设备。文件夹只需添加一次，CineFuze 会自动扫描。</string>
+    <string name="help_addons">来自互联网的更多目录和流：Stremio 插件或 CineFuze 插件文件。它们显示在“插件”标签页中。</string>
+    <string name="help_tmdb_lang">更改后，将以新语言重新下载整个媒体库的标题、简介和海报。</string>
+    <string name="help_categories">你自己的海报墙，例如“儿童”或“演唱会”，由你选择的媒体源组成；每个都可以在顶部菜单中拥有独立标签页。</string>
+    <!-- Appearance -->
+    <string name="help_layout">电影和剧集海报墙的外观。选择适合你屏幕的一种；随时可以改回。</string>
+    <string name="help_full_wall">为海报留出更多空间：顶部菜单保持隐藏，直到你在第一排按上或按返回。</string>
+    <string name="help_group_collections">让电影海报墙更简洁：系列电影合并为一个图块，而不是每部一个。</string>
+    <string name="help_tabs">隐藏从不使用的标签页（例如音乐或照片），让顶部菜单更简洁；你自己的分类也可以显示在这里。</string>
+    <string name="help_ui_lang">CineFuze 菜单的语言，与盒子自身的语言无关。影片资料的语言由 TMDB 语言决定。</string>
+    <!-- Playback -->
+    <string name="help_fel_demo">用于对比：显示 Dolby Vision FEL 层为画面增加了什么。正常观看时请保持关闭。</string>
+    <string name="help_mvc_decoder">此盒子上 3D 蓝光电影（MVC）的解码方式。默认为软件；如果 3D 电影播放不佳，请切换。</string>
+    <string name="help_audio_lang">选择你的语言，只要文件中有该语言的音轨，电影就会以该音轨开始播放。</string>
+    <string name="help_sub_lang">选择一种语言，从一开始就显示该语言的字幕；选择“关闭”则完全不显示字幕。</string>
+    <string name="help_sub_forced">适合听得懂电影语言的情况：其他语言的对白仍会显示字幕。</string>
+    <string name="help_sub_size">离屏幕较远时可用更大的字幕，或用更小的字幕减少对画面的遮挡。</string>
+    <string name="help_sub_bg">字幕下方的背景可让字幕在明亮场景中依然清晰可读。</string>
+    <string name="help_sub_color">文本字幕（SRT 等）的颜色；有些人觉得黄色比白色更易阅读。</string>
+    <string name="help_iphone_dv">仅影响用 iPhone 拍摄的 Dolby Vision 视频；电影不受影响。</string>
+    <string name="help_trickplay">在电影中快进或快退时，进度条上方显示的小预览图。</string>
+    <string name="help_trailer_auto">开启：电影页面会像流媒体服务一样在背景中播放预告片。关闭：页面保持安静。</string>
+    <string name="help_trailer_volume">如果浏览时预告片声音太大，请调低。</string>
+    <string name="help_player">用哪个播放器播放电影：CineFuze 自己的播放器，或 Dune 内置播放器（使用其自身的菜单和设置）。</string>
+    <!-- Audio -->
+    <string name="help_passthrough">由 AV 功放或回音壁解码声音时请开启。如果没有声音或有噪音，请关闭。</string>
+    <string name="help_passthrough_formats">关闭功放处理不好的格式：该格式将以 PCM 播放。</string>
+    <string name="help_truehd_decode">如果 TrueHD 电影没有声音，请选盒子；想要 Dolby Atmos 请选电视 / 功放。</string>
+    <string name="help_music_native_rate">适用于高解析度音乐：功放以每首曲目的原始采样率接收。如果功放处理有问题，请关闭。</string>
+    <!-- Photos -->
+    <string name="help_slideshow">幻灯片中照片的切换方式。列表会用你最新的照片实时展示每种样式。</string>
+    <string name="help_slideshow_music">幻灯片播放时的音乐，来自你自己的音乐库。</string>
+    <string name="help_slideshow_sepia">为幻灯片加上老电影效果；你的照片本身不会被修改。</string>
+    <!-- Sync -->
+    <string name="help_sync">家中有多台盒子时：在一台上停止的电影，可在另一台上从停止处继续。</string>
+    <string name="help_box_name">其他盒子在同步状态中显示本盒子所用的名称。</string>
+    <!-- About -->
+    <string name="help_about_home">GitHub 上的新闻、发布说明、问题和错误报告（Issues）。</string>
+    <string name="help_about_update">CineFuze 启动时也会自动检查；在这里可以立即检查并安装新版本。</string>
+
+    <!-- Sources -->
+    <string name="help_refresh_library">立即重新扫描所有媒体源：新文件会出现，已删除的会消失。仅对未开启自动刷新的媒体源需要。</string>
+    <string name="help_restore_hidden">恢复你从海报墙上隐藏的电影和剧集。</string>
+    <string name="help_live_playlists">用于“直播电视”标签页的 IPTV 播放列表（M3U、Xtream Codes、One TV）。</string>
+    <string name="help_auto_refresh">开启：此文件夹中新增和删除的文件会自动反映在海报墙上，无需刷新媒体库。</string>
+    <string name="help_category_only">开启：此文件夹的电影和剧集只显示在使用它的分类中（例如“儿童”），不显示在主电影、剧集海报墙上。</string>
+    <string name="help_nfs_export">用于蓝光文件夹和 ISO：Dune 自带的蓝光播放器通过 NFS 打开它们。留空：使用共享名称。</string>
+    <string name="help_browse_network">查找网络上的 SMB 服务器（NAS、电脑）：打开一个文件夹，并按内容类型添加。</string>
+    <string name="help_browse_local">盒子上的 USB 存储或硬盘：打开一个文件夹，并按内容类型添加。</string>
+    <string name="help_source_content">文件夹中的内容：电影、剧集、其他视频、照片或音乐。按 OK 更改。</string>
+    <string name="help_test_connection">在添加媒体源之前检查服务器、共享和登录信息。</string>
+    <!-- Categories -->
+    <string name="help_category_open">打开该分类的海报墙，即使它在顶部菜单中没有标签页。</string>
+    <string name="help_category_edit">将该分类载入下方表单：修改名称、类型或媒体源，然后保存。</string>
+    <string name="help_category_in_menu">开启：该分类在顶部菜单中有独立标签页。关闭：从此页面打开。</string>
+    <string name="help_category_type">该分类显示的内容：电影、剧集、其他视频、照片或音乐。只列出包含该内容的媒体源。</string>
+    <string name="help_category_pick">✓：此媒体源中的影片属于该分类。一个分类可以从多个媒体源中获取内容。</string>
+    <string name="help_category_browse">直接为该分类添加一个新文件夹，并设为“仅用于分类”：其中的影片不会显示在主海报墙上。</string>
+    <!-- Add-ons -->
+    <string name="help_addon_enabled">关闭：插件仍保持安装，但不使用其目录和流。</string>
+    <string name="help_addon_own_tab">开启：插件的目录在顶部菜单中拥有独立标签页，而不是放在“插件”标签页中。</string>
+    <string name="help_addon_up">上移一位：列表中靠前的插件优先。</string>
+    <string name="help_addon_update">从插件地址重新加载，获取其最新目录。</string>
+    <string name="help_addon_login">有些插件需要你在其服务中的账户（例如订阅）才能播放。</string>
+    <string name="help_addon_url">输入插件地址，或用下方按钮选择插件文件。</string>
+    <string name="help_addon_browse">从网络共享或盒子的存储设备中选择 CineFuze 插件文件。</string>
+    <!-- Live TV playlists -->
+    <string name="help_live_refresh">立即重新加载所有播放列表的频道和节目指南。</string>
+    <string name="help_live_archive">向服务商请求往期节目的方式。保持自动即可；如果回看无法播放，请尝试其他方式。</string>
+    <string name="help_live_type">M3U：服务商提供的播放列表地址。Xtream Codes：服务器加用户名和密码。One TV：你的 One 账户。</string>
+    <string name="help_live_epg">节目指南的地址（XMLTV），如果服务商在播放列表之外单独提供。</string>
+    <string name="help_live_test">加载一次频道以检查地址和登录信息，但不添加播放列表。</string>
+</resources>

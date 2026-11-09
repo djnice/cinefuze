@@ -1,0 +1,31 @@
+<resources>
+    <!-- sound as a bitstream on HDMI (AudioOut) -->
+    <string name="set_passthrough">Bitstream audio (passthrough)</string>
+    <string name="set_passthrough_hint">The amplifier decodes Dolby and DTS sound (Atmos, DTS:X too); off: the player decodes it to PCM. From the next playback.</string>
+    <string name="set_passthrough_formats">Bitstream formats</string>
+    <string name="set_passthrough_formats_hint">The formats sent as a bitstream when the HDMI device takes them; the others play as PCM.</string>
+    <string name="set_passthrough_sink">The HDMI device takes: %1$s</string>
+    <string name="set_passthrough_sink_none">The HDMI device takes no bitstream format (or it is not known)</string>
+    <string name="set_passthrough_none">none</string>
+    <string name="set_passthrough_unsupported">%1$s (the HDMI device does not take it)</string>
+    <string name="set_truehd_decode">TrueHD decoded by</string>
+    <string name="set_truehd_decode_sink">the TV / amplifier (Atmos)</string>
+    <string name="set_truehd_decode_box">the box</string>
+    <string name="set_truehd_decode_hint">The TV / amplifier: Dolby Atmos where it takes TrueHD (silent where it does not: choose the box). The box: always heard, without Atmos. From the next playback.</string>
+    <string name="passthrough_formats_close">Done</string>
+    <string name="audio_out_bitstream">Bitstream · %1$s</string>
+    <string name="audio_out_pcm">PCM · %1$d ch · %2$.1f kHz</string>
+    <string name="audio_out_box_wraps">packed by the box</string>
+    <string name="osd_bitstream">bitstream</string>
+    <string name="osd_audio_delay">Audio delay</string>
+    <string name="info_audio_out">Audio out</string>
+    <string name="info_codec">Codec</string>
+    <string name="info_channels">Channels</string>
+    <string name="info_sample_rate">Sample rate</string>
+    <string name="info_khz">%1$s kHz</string>
+    <string name="info_language">Language</string>
+    <string name="set_music_native_rate">Music at its own sample rate</string>
+    <string name="set_music_native_rate_hint">The music player sends 44.1, 96 and 192 kHz stereo to HDMI as it is (16 bit), not converted to 48 kHz. Off: 48 kHz, as before. From the next track.</string>
+    <string name="set_zidoo_multichannel">Multichannel music on the Zidoo engine (experimental)</string>
+    <string name="set_zidoo_multichannel_hint">A multichannel DSD file on a drive of the box (USB) goes to the Zidoo engine anyway; with this on, the other multichannel tracks (5.1 FLAC) too - it takes them only with Zidoo\'s own multichannel / SACD settings. Off: those play through Android (converted to PCM), as in Zidoo\'s music app with raw output.</string>
+</resources>

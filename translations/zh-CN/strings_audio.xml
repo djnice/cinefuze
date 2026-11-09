@@ -1,0 +1,31 @@
+<resources>
+    <!-- sound as a bitstream on HDMI (AudioOut) -->
+    <string name="set_passthrough">音频直通（Bitstream）</string>
+    <string name="set_passthrough_hint">由功放解码杜比和 DTS 音频（包括 Atmos、DTS:X）；关闭：由播放器解码为 PCM。下次播放起生效。</string>
+    <string name="set_passthrough_formats">直通格式</string>
+    <string name="set_passthrough_formats_hint">HDMI 设备支持时以直通方式输出的格式；其他格式以 PCM 播放。</string>
+    <string name="set_passthrough_sink">HDMI 设备支持：%1$s</string>
+    <string name="set_passthrough_sink_none">HDMI 设备不支持任何直通格式（或无法识别）</string>
+    <string name="set_passthrough_none">无</string>
+    <string name="set_passthrough_unsupported">%1$s（HDMI 设备不支持）</string>
+    <string name="set_truehd_decode">TrueHD 解码方</string>
+    <string name="set_truehd_decode_sink">电视 / 功放（Atmos）</string>
+    <string name="set_truehd_decode_box">盒子</string>
+    <string name="set_truehd_decode_hint">电视 / 功放：支持 TrueHD 时输出 Dolby Atmos（不支持时无声：请选盒子）。盒子：始终有声音，但无 Atmos。下次播放起生效。</string>
+    <string name="passthrough_formats_close">完成</string>
+    <string name="audio_out_bitstream">直通 · %1$s</string>
+    <string name="audio_out_pcm">PCM · %1$d 声道 · %2$.1f kHz</string>
+    <string name="audio_out_box_wraps">由盒子封装</string>
+    <string name="osd_bitstream">直通</string>
+    <string name="osd_audio_delay">音频延迟</string>
+    <string name="info_audio_out">音频输出</string>
+    <string name="info_codec">编码</string>
+    <string name="info_channels">声道</string>
+    <string name="info_sample_rate">采样率</string>
+    <string name="info_khz">%1$s kHz</string>
+    <string name="info_language">语言</string>
+    <string name="set_music_native_rate">音乐按原始采样率输出</string>
+    <string name="set_music_native_rate_hint">音乐播放器将 44.1、96 和 192 kHz 立体声原样（16 bit）输出到 HDMI，不转换为 48 kHz。关闭：48 kHz，与之前相同。下一首起生效。</string>
+    <string name="set_zidoo_multichannel">多声道音乐使用 Zidoo 引擎（实验性）</string>
+    <string name="set_zidoo_multichannel_hint">盒子本地存储（USB）上的多声道 DSD 文件始终交给 Zidoo 引擎；开启后，其他多声道曲目（5.1 FLAC）也交给它——仅在 Zidoo 自身的多声道 / SACD 设置允许时才会接收。关闭：这些曲目通过 Android 播放（转换为 PCM），与 Zidoo 音乐应用的 RAW 输出相同。</string>
+</resources>
