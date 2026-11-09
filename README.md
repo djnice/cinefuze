@@ -10,8 +10,9 @@ without Dolby Vision FEL.
 
 ![Movies wall](screenshots/movies.jpg)
 
-> **CineFuze 1.2.1:** Blu-ray movies made of several clips play in one piece without the disc menu too; the Live TV
-> archive (catch-up); add-on logos as SVG too.
+> **CineFuze 1.3:** 4K and Collections tabs for the top menu (off by default); audio delay; the audio track's bit depth
+> and bitrate in the INFO panel; a Simplified Chinese interface; DSF / DFF (DSD) music sounds right; on Zidoo boxes
+> (experimental) music plays through the Zidoo's own music engine at the file's own sample rate.
 
 > **New in CineFuze 1.2:** [add-ons](#add-ons) – Stremio add-ons and CineFuze add-on files bring catalogs, search
 > and playback from the web ([write your own](ADDONS.md)); add-ons' movies open on the movie page with the trailer,
@@ -38,12 +39,12 @@ without Dolby Vision FEL.
   folders and TMDB; whatever it gets wrong can be set by hand from the item's menu.
 - Sources refresh by themselves when files change on the server (SMB change notifications while the app is open, a
   regular check otherwise); an unplugged drive's titles leave the walls and come back with it.
-- Metadata from TMDB in 17 languages (titles, plots, posters, backdrops, title logos), disc art from fanart.tv.
+- Metadata from TMDB in 20 languages (titles, plots, posters, backdrops, title logos), disc art from fanart.tv.
 - Media info read from the files themselves: resolution, HDR10 / HDR10+ / HLG, Dolby Vision profile and FEL / MEL,
   MaxCLL / MaxFALL and the RPU's L6, Atmos / DTS:X / DTS-HD MA audio, subtitles, chapters.
 - Watched marks, resume points and favorite scenes shared between boxes through the NAS.
-- The interface in English, Hungarian, Russian, German, French, Spanish and Swedish (Settings → Appearance; the
-  last four machine translated – corrections are welcome).
+- The interface in English, Hungarian, Russian, German, French, Spanish, Swedish and Simplified Chinese (Settings →
+  Appearance; the last five machine translated – corrections are welcome).
 
 ### Browsing
 - Four wall layouts: Highlight (the selected title large), Full wall, Large posters, and 2.39:1 variants for scope
