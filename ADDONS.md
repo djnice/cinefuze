@@ -75,7 +75,15 @@ Notes:
 - The file must be a JSON object with a non-empty `id` and `name`, or installation fails with
   `not an add-on manifest (no id / name)`.
 - A Stremio add-on must be installed from its URL: its other resources are requested relative to the
-  manifest address. A Stremio manifest installed from a file has no server to talk to.
+  manifest address. A Stremio manifest kept as a file (on a share or a drive) has no server to talk to,
+  unless the file names it: with a top-level `"transportUrl": "https://host/path/manifest.json"` (Stremio's
+  own name for an add-on's address) picking the file installs the add-on from that address, as if it had
+  been typed. Without one, the file is refused: *This is a Stremio add-on's manifest: add it by its
+  server's address …*.
+- On Android 11 and later, **Browse the box's drives** lists the `.json` files only with *all files
+  access*; with the storage permission alone a drive shows its folders and media files. The list then
+  starts with **Allow access to all files…**, which opens the system's page for it, and reads the folder
+  again once it is given.
 - When you pick a file with **Browse the network** and type a login there, the login is used to read the
   file but is **not** stored with the add-on's address. A login typed into an `smb://` URL in the Address
   field is stored as part of that address.
