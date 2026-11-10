@@ -166,6 +166,10 @@ only); any other failure, of the add-on or of playback, shows *The channel does 
 
 - A `movie` item whose id is an IMDb id (`tt…`) and that TMDB knows opens CineFuze's library movie page
   (section 15).
+- A `movie` or `series` item whose id is a TMDB id, `tmdb:<number>` (a movie's for `movie`, a TV show's for
+  `series`), is first turned into its IMDb id when TMDB knows one; from then on it is that `tt…` item: the
+  library movie page, Cinemeta's episodes, the stream add-ons' sources and the watched state all go by the
+  IMDb id. Without one, it opens the add-on item page with TMDB's details in CineFuze's TMDB language.
 - Every other item opens the add-on item page. Its details come from the **first enabled add-on, in the
   user's order, that serves `meta`** for the item's type and id and answers (for `tt…` ids that is usually
   Cinemeta); when none does, the catalog item's own fields are used. The page shows the background, a facts line
@@ -493,6 +497,8 @@ syntax: `results`, `data.list.*.item`, `blocks.*.items.*`, `assets.[type=dash].i
 | `{value}` | `catalogs.*.pages`, `videos.head`, `videos.pages` | The list being fetched (9, 10.2) |
 | `{minute}` | everywhere but `auth` | Minutes since 1970: changes once a minute (for picture addresses that must change) |
 | `{now}` | everywhere but `auth` | Seconds since 1970 |
+| `{tmdb.key}` | everywhere but `auth` | CineFuze's own TMDB API key, so a file built on TMDB's lists needs no key of its own (empty in a build without TMDB) |
+| `{tmdb.lang}` | everywhere but `auth` | CineFuze's TMDB language (`hu-HU`, `en-US`, …): the one set in the settings, else the interface's |
 | `{wv}` | a `stream` block that has `drm` | `hardware` on a box with Widevine L1, else `software` |
 | *saved names* | later steps of the same stream, its `stream` and `drm` | What a step's `save` kept (11.2) |
 | `{auth.<name>}` | everywhere but `auth`, when logged in | What a token-chain login kept (13.2); inside `auth` the same values are written without `auth.` |
@@ -563,8 +569,9 @@ The text may not contain `)$`. In call addresses the hashed text contains the UR
 ## 7. Condition objects
 
 Several keys take an object of `path: value` pairs. The paths are plain paths (6.2) into the current item
-or answer; values are compared as text, so `true`, `"true"`, `5` and `"5"` all work. A `null` value never
-matches.
+or answer; values are compared as text, so `true`, `"true"`, `5` and `"5"` all work. A `null` value
+matches a field that is missing, `null` or empty: `"skipIf": {"poster_path": null}` leaves out the items
+without a poster.
 
 | Key | Where | Matches when |
 |---|---|---|
