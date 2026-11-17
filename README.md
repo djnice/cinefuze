@@ -4,11 +4,24 @@
 R_volution players with an Amlogic S928X or S905X4, on its own libVLC build that
 plays the full enhancement layer of Dolby Vision profile 7 (composited on the GPU of the S928X, by the Dolby Vision core
 of the S905X4) and 3D Blu-ray (MVC) in frame packing. It also runs on Dune HD boxes with Homatics firmware, there
-without Dolby Vision FEL.
+without Dolby Vision FEL, and on Realtek players (Dune HD Real Vision 4K, Zappiti – experimental), where Dolby Vision
+plays in the box's own Realtek player under CineFuze's controls.
 
 [![Sponsor](https://img.shields.io/badge/Sponsor-%E2%98%95%20buy%20me%20a%20coffee-ea4aaa?logo=githubsponsors&logoColor=white)](https://github.com/sponsors/djnice)
 
 ![Movies wall](screenshots/movies.jpg)
+
+> **CineFuze 1.3.8:** faster starts and chapter jumps (text subtitles drawn by the app itself, as the Dune HD
+> player draws them); online subtitles from OpenSubtitles and feliratok.eu; your own posters next to the films; the
+> age rating and the production countries on add-ons' movie pages; on Realtek players no more quitting at start and
+> no film closed by switching the TV off and on.
+
+> **Since 1.3:** [AI subtitle translation](#subtitles) (Gemini) while the movie plays; subtitles from OpenSubtitles,
+> from the network or the box's drives, with a subtitle delay; frame stepping on Amlogic boxes, Blu-rays included;
+> number keys jump to a tenth of the movie; a search of your own library; HDR10+ movies as Dolby Vision 8.1, frame
+> by frame from their own HDR10+ metadata; 4K AV1 on the hardware decoder; spoiler protection for TV shows; the age
+> rating and the production countries on the movie page; an editable top menu; a "4K ULTRA HD" band on 4K posters;
+> no stutter with interlaced movies.
 
 > **CineFuze 1.3:** 4K and Collections tabs for the top menu (off by default); audio delay; the audio track's bit depth
 > and bitrate in the INFO panel; a Simplified Chinese interface; DSF / DFF (DSD) music sounds right; on Zidoo boxes
@@ -39,7 +52,13 @@ without Dolby Vision FEL.
   folders and TMDB; whatever it gets wrong can be set by hand from the item's menu.
 - Sources refresh by themselves when files change on the server (SMB change notifications while the app is open, a
   regular check otherwise); an unplugged drive's titles leave the walls and come back with it.
-- Metadata from TMDB in 20 languages (titles, plots, posters, backdrops, title logos), disc art from fanart.tv.
+- Metadata from TMDB in 20 languages (titles, plots, posters, backdrops, title logos), disc art from fanart.tv; the
+  age rating of your TMDB language's country and the production countries. A TMDB id, an IMDb id or a link can be
+  typed when a title needs to be matched by hand; an own TMDB server address and key where TMDB cannot be reached.
+- **Your own posters:** an image next to the film (`<film>-poster.jpg`, `<film>.jpg`, or poster / folder / cover in a
+  one-film folder, as Kodi and Plex name them), or one picked from the film's folder in the poster window.
+- **Search your own library:** movies, TV shows, collections and albums while you type (accents and a leading
+  article do not matter); titles sort without their leading article ("The Matrix" under M), or as written.
 - Media info read from the files themselves: resolution, HDR10 / HDR10+ / HLG, Dolby Vision profile and FEL / MEL,
   MaxCLL / MaxFALL and the RPU's L6, Atmos / DTS:X / DTS-HD MA audio, subtitles, chapters.
 - Watched marks, resume points and favorite scenes shared between boxes through the NAS.
@@ -57,7 +76,11 @@ without Dolby Vision FEL.
 - **Folders view** for those who prefer folders to a poster wall: the sources' folders and files as a list, the file
   name first and the library's title, year, size, length, badges and watched / resume marks with it, and a preview
   beside it. Movies play with their resume point, an album plays from the song you pick, photos open in the viewer.
-- **Choose the top menu's tabs:** keep only Movies, or any set of walls (Settings → Appearance → Menu tabs).
+- **Edit the top menu:** keep only Movies, or any set of walls and categories, in the order you like (Settings →
+  Appearance → Menu).
+- **Spoiler protection** for TV shows: the stills of unwatched episodes blurred, their plots hidden if you like.
+- A **"4K ULTRA HD" band** across 4K movies' posters, as on a UHD Blu-ray case (off by default).
+- Versions of a movie (4K and 1080p, other cuts) on one poster, in collections too.
 - **Watching** comes first: the movies and TV shows you left part way, the latest first – from the library and from
   add-ons.
 
@@ -67,9 +90,16 @@ without Dolby Vision FEL.
 - **3D Blu-ray (MVC)** in frame packing for 3D projectors and TVs (MKV / MK3D, m2ts, SSIF).
 - **Audio as an HDMI bitstream:** Dolby TrueHD / Atmos, DTS-HD MA / DTS:X, E-AC-3, AC-3, DTS – per format, only what
   the receiver takes.
+- **HDR10+ as Dolby Vision:** HDR10+ movies can play as Dolby Vision 8.1 on a Dolby Vision TV, frame by frame from
+  their own HDR10+ metadata (a setting, off by default); hybrid Dolby Vision + HDR10+ movies play as either.
+- 4K AV1 on the box's hardware decoder.
 - Automatic refresh-rate switching, seek previews (made in the background), chapters, audio / subtitle panels, an
-  INFO panel with the live Dolby Vision levels, and a FEL demo mode on the S928X (split screen: FEL vs. the base
+  INFO panel (the stream, the live Dolby Vision levels – L1 L2 L5 L6 and CM v4.0's L8–L11 –, the audio, the
+  subtitle, the chip's temperature and load), and a FEL demo mode on the S928X (split screen: FEL vs. the base
   layer).
+- **Frame stepping** on Amlogic boxes: Left / Right steps one frame while paused, exact on Blu-rays too; the number
+  keys jump to a tenth of the movie (5: half way, 0: the start).
+- Audio delay, subtitle delay.
 - **Blu-ray folders and ISO images:** you choose how a disc starts – with its menu in the player's own Blu-ray player
   (HDMV and BD-J; when the main movie starts, CineFuze takes over, over SMB or NFS), or without the menu, straight into
   the main movie in CineFuze; a movie can resume without the menu too.
@@ -79,7 +109,19 @@ without Dolby Vision FEL.
   the resume point saved; a disc starts with its menu or in lite mode.
 - Favorite scenes: mark the start and end while a movie plays; scene cards and a timeline on the detail page.
 - **Skiptro:** a TV episode with its `.skiptro.json` beside it shows "OK: skip the intro" while the intro runs.
-- Subtitle color (white, yellow, green, cyan, orange, light gray) and size.
+
+### Subtitles
+- Text subtitles (subtitle files, an MKV's SRT / ASS / WebVTT tracks) are drawn by CineFuze itself over the picture,
+  as the Dune HD player draws them; Blu-ray (PGS) subtitles by libVLC. Color, size (up to 200 %), background.
+- Subtitle files next to the movie (`Movie.hu.srt`, a `Subs` folder) are found by themselves; any file can be loaded
+  from the network (SMB) or the box's drives while the movie plays, in its language's usual code page when it is not
+  UTF-8.
+- **Online subtitles** from the subtitle panel, with no key or login: OpenSubtitles (for your own files the
+  subtitles made for that very release first, by the file's hash; for add-on streams by the IMDb id) and, with a
+  Hungarian TMDB language, feliratok.eu.
+- **AI subtitle translation (Gemini):** an English text subtitle translated to your language while the movie plays,
+  ahead of the playing position; a free Google AI Studio key is enough (typed, or pasted from a phone by a QR code).
+  Lines translated once are kept for the next time.
 
 ### Add-ons
 - **Stremio add-ons** by their manifest address (Cinemeta, for example): their catalogs as walls with search,
@@ -90,7 +132,7 @@ without Dolby Vision FEL.
   trailer, extras and cast, and **IMDb's technical specs** (sound mix, aspect ratio, camera, negative, process) in the
   technical card.
 - Add-ons are added in Settings → Add-ons (an address, an `smb://` path or a file on the box), each can have a tab of
-  its own; adult add-ons ask once before they open.
+  its own; adult add-ons ask once before they open. Add-on files can also build catalogs from TMDB's lists.
 
 ### Live TV (IPTV)
 - Your provider's **M3U playlist** (URL or file) or **Xtream Codes** login, with its **XMLTV programme guide**.
@@ -108,7 +150,8 @@ without Dolby Vision FEL.
   if you like.
 - Music: album wall with covers and disc art (MusicBrainz, Cover Art Archive, fanart.tv), an album page with a
   spinning record, and a player with four visualizers – bars, ring, neon wave and piano lights; FLAC, APE and the
-  usual formats.
+  usual formats, WavPack and DSD (DSF / DFF). On Dune HD boxes music can play at the track's own sample rate; on
+  Zidoo boxes (experimental) through the Zidoo's own music engine.
 
 ### On the player's firmware
 - Firmware without the Dolby Vision FEL module (Dune HD r22 / r24): the kernel module is installed with the first
@@ -122,6 +165,10 @@ without Dolby Vision FEL.
   access for the kernel module); everything else plays. The Dune HD app's player can be chosen, TrueHD is decoded by
   the TV / amplifier or by the box (a setting), Dolby Vision movies get black letterbox bars, and the refresh rate
   follows Android's "match content frame rate" setting.
+- Realtek players (Dune HD Real Vision 4K, Zappiti – experimental): Dolby Vision movies play in the box's own Realtek
+  player, with Dolby Vision output and CineFuze's controls, tracks, subtitles and resume; profile 7 FEL plays without
+  its enhancement layer, as in the Dune HD player. Blu-ray folders and ISO images start with the Dune HD's disc menu
+  and the main movie goes on in CineFuze. Frame stepping is not possible there.
 
 ## Screenshots
 
@@ -157,8 +204,9 @@ with their own frequency band.</sub>
 epgshare01 guide; the programme texts are the guide's, in Hungarian.)</sub>
 
 ## Requirements
-- A Dune HD or R_volution player with an Amlogic S928X or S905X4 (a Dune HD with Dune HD or Homatics firmware).
-- Android 11 or newer, 32-bit (armeabi-v7a) userspace.
+- A Dune HD or R_volution player with an Amlogic S928X or S905X4 (a Dune HD with Dune HD or Homatics firmware),
+  Android 11 or newer; or a Realtek player (Dune HD Real Vision 4K, Zappiti – experimental).
+- A 32-bit (armeabi-v7a) userspace.
 - Media on a NAS / PC (SMB) or a drive connected to the box.
 
 ## Download
