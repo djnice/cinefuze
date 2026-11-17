@@ -11,8 +11,8 @@ plays in the box's own Realtek player under CineFuze's controls.
 
 ![Movies wall](screenshots/movies.jpg)
 
-> **CineFuze 1.3.8:** faster starts and chapter jumps (text subtitles drawn by the app itself, as the Dune HD
-> player draws them); online subtitles from OpenSubtitles and feliratok.eu; your own posters next to the films; the
+> **CineFuze 1.3.8:** text subtitles drawn by the app itself, as the Dune HD player draws them; no stale picture
+> after a chapter jump; online subtitles from feliratok.eu next to OpenSubtitles; your own posters next to the films; the
 > age rating and the production countries on add-ons' movie pages; on Realtek players no more quitting at start and
 > no film closed by switching the TV off and on.
 
