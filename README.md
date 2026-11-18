@@ -11,10 +11,13 @@ plays in the box's own Realtek player under CineFuze's controls.
 
 ![Movies wall](screenshots/movies.jpg)
 
-> **CineFuze 1.3.8:** text subtitles drawn by the app itself, as the Dune HD player draws them; no stale picture
-> after a chapter jump; online subtitles from feliratok.eu next to OpenSubtitles; your own posters next to the films; the
-> age rating and the production countries on add-ons' movie pages; on Realtek players no more quitting at start and
-> no film closed by switching the TV off and on.
+> **CineFuze 1.3.9:** HDR10+ movies stay HDR10+ on Philips (MediaTek) TVs, also when the metadata is only at key
+> frames; Dolby Vision + HDR10+ hybrids recognised from the video stream, so "Hybrid movies" chooses for them too;
+> HDR10+ as Dolby Vision on Realtek players; black bars again for cropped Dolby Vision movies on the Dune HD firmware's
+> Android 11 boxes; DTS and real channel counts in MP4; faster seek previews.
+>
+> **1.3.8:** text subtitles drawn by the app itself, as the Dune HD player draws them; no stale picture after a chapter
+> jump; online subtitles from feliratok.eu next to OpenSubtitles; your own posters next to the films.
 
 > **Since 1.3:** [AI subtitle translation](#subtitles) (Gemini) while the movie plays; subtitles from OpenSubtitles,
 > from the network or the box's drives, with a subtitle delay; frame stepping on Amlogic boxes, Blu-rays included;
