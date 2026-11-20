@@ -13,8 +13,7 @@ plays in the box's own Realtek player under CineFuze's controls.
 
 > **CineFuze 1.4:** a [Home screen](#screenshots) (off by default) with a spotlight, rows and tiles, in 16:9 and in
 > the 2.39:1 band; **Jellyfin servers** as library sources, played without transcoding, watch states synced;
-> **import from R_video** (R_volution, Zappiti): your titles, posters, backgrounds and watched movies from its offline
-> backup; library statistics; 3D and 4K in the Category filter; the Identify window shows each result's poster and
+> library statistics; 3D and 4K in the Category filter; the Identify window shows each result's poster and
 > plot, the Versions window each version's file name; better matching of names with "3D", "UHD" or "Disc 1"; public
 > live TV channels by country (iptv-org); poster labels that can be turned off.
 >
@@ -53,8 +52,6 @@ plays in the box's own Realtek player under CineFuze's controls.
 - **Jellyfin servers** as sources: login by password or Quick Connect, the movies and TV shows with the server's own
   metadata and artwork, played as they are (Dolby Vision, HDR10+, no transcoding), resume points and watched marks
   synced with the server.
-- **Import from R_video** (R_volution, Zappiti; shown when R_video is installed): your titles, plots, ratings, posters,
-  backgrounds and watched movies from R_video's offline backup, each movie found by its own file.
 - **Statistics:** movies, files with every version, 4K, 3D, Dolby Vision, HDR10+, collections, TV shows and episodes.
 - Movies, TV shows, other videos, photos and music, each with its own wall – or all of them as folders.
 - **Your own categories** (Kids, Concerts, Documentaries …): a type and the sources it comes from, a tab of its own in
@@ -199,7 +196,6 @@ New in 1.4:
 | ![Home screen](screenshots/1.4/home.jpg)<br><sub>Home screen: the spotlight and Watching</sub> | ![Home screen in 2.39:1](screenshots/1.4/home-scope.jpg)<br><sub>The Home screen in the 2.39:1 band of a scope screen</sub> |
 | ![Home screen tiles](screenshots/1.4/home-rows.jpg)<br><sub>Tiles for tabs, categories and genres, with their counts</sub> | ![Category filter](screenshots/1.4/category-4k.jpg)<br><sub>The Category filter: 4K (and 3D) first, then TMDB's genres</sub> |
 | ![Identify](screenshots/1.4/identify.jpg)<br><sub>Identify: the focused result's poster and plot – the same title, years apart</sub> | ![Statistics](screenshots/1.4/statistics.jpg)<br><sub>Statistics of the library</sub> |
-| ![Library settings](screenshots/1.4/settings-library.jpg)<br><sub>Settings → Library: Statistics and Import from R_video</sub> | |
 
 New in 1.2:
 
