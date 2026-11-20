@@ -11,7 +11,11 @@ plays in the box's own Realtek player under CineFuze's controls.
 
 ![Movies wall](screenshots/movies.jpg)
 
-> **CineFuze 1.4.1:** login to Jellyfin 12 servers fixed; add-on addresses, IPTV playlists and the TMDB server
+> **CineFuze 1.4.2:** DTS:X / DTS-HD MA in MP4 passed through as DTS-HD; refresh rate switching on Zidoo and other
+> Amlogic boxes without the Dune firmware; Jellyfin collections' movies all listed; bitstream behind an HDMI audio
+> extractor; Back ends on the home screen.
+>
+> **1.4.1:** login to Jellyfin 12 servers fixed; add-on addresses, IPTV playlists and the TMDB server
 > **typed on your phone** (a QR code on the TV); **library backup and restore**; hide watched titles with any order; a
 > "Not identified" category; Extras folders left off the walls; the AUDIO / SUBTITLE keys open the track list;
 > subtitles switched on for audio in another language; subtitle brightness and calmer colours; audio delay in 5 ms
