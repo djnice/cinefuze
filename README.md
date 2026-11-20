@@ -11,13 +11,16 @@ plays in the box's own Realtek player under CineFuze's controls.
 
 ![Movies wall](screenshots/movies.jpg)
 
-> **CineFuze 1.3.9:** HDR10+ movies stay HDR10+ on Philips (MediaTek) TVs, also when the metadata is only at key
-> frames; Dolby Vision + HDR10+ hybrids recognised from the video stream, so "Hybrid movies" chooses for them too;
-> HDR10+ as Dolby Vision on Realtek players; black bars again for cropped Dolby Vision movies on the Dune HD firmware's
-> Android 11 boxes; DTS and real channel counts in MP4; faster seek previews.
+> **CineFuze 1.4:** a [Home screen](#screenshots) (off by default) with a spotlight, rows and tiles, in 16:9 and in
+> the 2.39:1 band; **Jellyfin servers** as library sources, played without transcoding, watch states synced;
+> **import from R_video** (R_volution, Zappiti): your titles, posters, backgrounds and watched movies from its offline
+> backup; library statistics; 3D and 4K in the Category filter; the Identify window shows each result's poster and
+> plot, the Versions window each version's file name; better matching of names with "3D", "UHD" or "Disc 1"; public
+> live TV channels by country (iptv-org); poster labels that can be turned off.
 >
-> **1.3.8:** text subtitles drawn by the app itself, as the Dune HD player draws them; no stale picture after a chapter
-> jump; online subtitles from feliratok.eu next to OpenSubtitles; your own posters next to the films.
+> **1.3.9:** HDR10+ kept on Philips (MediaTek) TVs; Dolby Vision + HDR10+ hybrids recognised from the video stream;
+> HDR10+ as Dolby Vision on Realtek players; DTS and real channel counts in MP4; faster seek previews.
+> **1.3.8:** text subtitles drawn by the app itself; subtitles from feliratok.eu; your own posters next to the films.
 
 > **Since 1.3:** [AI subtitle translation](#subtitles) (Gemini) while the movie plays; subtitles from OpenSubtitles,
 > from the network or the box's drives, with a subtitle delay; frame stepping on Amlogic boxes, Blu-rays included;
@@ -47,6 +50,12 @@ plays in the box's own Realtek player under CineFuze's controls.
 ### Library
 - Sources: SMB shares (NAS, PC) and the box's own drives (USB, internal HDD); network browsing (NetBIOS, mDNS) that
   reuses the logins the player's firmware has saved.
+- **Jellyfin servers** as sources: login by password or Quick Connect, the movies and TV shows with the server's own
+  metadata and artwork, played as they are (Dolby Vision, HDR10+, no transcoding), resume points and watched marks
+  synced with the server.
+- **Import from R_video** (R_volution, Zappiti; shown when R_video is installed): your titles, plots, ratings, posters,
+  backgrounds and watched movies from R_video's offline backup, each movie found by its own file.
+- **Statistics:** movies, files with every version, 4K, 3D, Dolby Vision, HDR10+, collections, TV shows and episodes.
 - Movies, TV shows, other videos, photos and music, each with its own wall – or all of them as folders.
 - **Your own categories** (Kids, Concerts, Documentaries …): a type and the sources it comes from, a tab of its own in
   the top menu if you like. A source can be **categories only**, so its titles stay off the main walls; a new source
@@ -57,7 +66,8 @@ plays in the box's own Realtek player under CineFuze's controls.
   regular check otherwise); an unplugged drive's titles leave the walls and come back with it.
 - Metadata from TMDB in 20 languages (titles, plots, posters, backdrops, title logos), disc art from fanart.tv; the
   age rating of your TMDB language's country and the production countries. A TMDB id, an IMDb id or a link can be
-  typed when a title needs to be matched by hand; an own TMDB server address and key where TMDB cannot be reached.
+  typed when a title needs to be matched by hand, and the results show their posters and plots; an own TMDB server
+  address and key where TMDB cannot be reached.
 - **Your own posters:** an image next to the film (`<film>-poster.jpg`, `<film>.jpg`, or poster / folder / cover in a
   one-film folder, as Kodi and Plex name them), or one picked from the film's folder in the poster window.
 - **Search your own library:** movies, TV shows, collections and albums while you type (accents and a leading
@@ -69,9 +79,13 @@ plays in the box's own Realtek player under CineFuze's controls.
   Appearance; the last five machine translated – corrections are welcome).
 
 ### Browsing
+- **Home screen** (off by default): a spotlight with the movies under way and the new ones, rows (Watching, Recently
+  added, New episodes, Collections, Top rated) and two rows of tiles for tabs, categories and genres, each with a
+  cover image of your own if you like; in 16:9 and in the 2.39:1 band.
 - Four wall layouts: Highlight (the selected title large), Full wall, Large posters, and 2.39:1 variants for scope
   screens.
-- Sort and filter chips: A–Z, rating, runtime, date added, year, genre, folder; page jumps with P+ / P-.
+- Sort and filter chips: A–Z, rating, runtime, date added, year, category (3D and 4K first, then TMDB's genres),
+  folder; page jumps with P+ / P-.
 - Detail page: backdrop, title logo, director, a technical card, cast with face-centred photos and biographies,
   extras (TMDB videos, soundtrack), and the trailer in a soft-edged window.
 - TV shows: episode detection from folders and file names, season posters, episode stills, a countdown to the next
@@ -83,7 +97,8 @@ plays in the box's own Realtek player under CineFuze's controls.
   Appearance → Menu).
 - **Spoiler protection** for TV shows: the stills of unwatched episodes blurred, their plots hidden if you like.
 - A **"4K ULTRA HD" band** across 4K movies' posters, as on a UHD Blu-ray case (off by default).
-- Versions of a movie (4K and 1080p, other cuts) on one poster, in collections too.
+- Versions of a movie (4K and 1080p, 3D, other cuts) on one poster, in collections too; the Versions window shows
+  each one's file name. The labels on the posters (versions, collection size, edition) can be turned off.
 - **Watching** comes first: the movies and TV shows you left part way, the latest first – from the library and from
   add-ons.
 
@@ -145,7 +160,9 @@ plays in the box's own Realtek player under CineFuze's controls.
 - **Archive (catch-up):** channels with an archive in the playlist (`tvg-rec`, `catchup`, `catchup-source`) or on
   the Xtream server get an ARCHIVE tag; Right opens the past days' programs, OK plays one from its start, with
   seeking and the next / previous program.
-- CineFuze contains no channels: it plays the playlist you add.
+- **Public channels by country:** a country's free-to-air list from [iptv-org](https://github.com/iptv-org/iptv)
+  added with a country picker.
+- CineFuze contains no channels: it plays the playlist you add, or the iptv-org list you pick.
 
 ### Photos and music
 - Photo wall with dates and places (EXIF), a full-screen viewer with a map of where the photo was taken.
@@ -174,6 +191,15 @@ plays in the box's own Realtek player under CineFuze's controls.
   and the main movie goes on in CineFuze. Frame stepping is not possible there.
 
 ## Screenshots
+
+New in 1.4:
+
+| | |
+|---|---|
+| ![Home screen](screenshots/1.4/home.jpg)<br><sub>Home screen: the spotlight and Watching</sub> | ![Home screen in 2.39:1](screenshots/1.4/home-scope.jpg)<br><sub>The Home screen in the 2.39:1 band of a scope screen</sub> |
+| ![Home screen tiles](screenshots/1.4/home-rows.jpg)<br><sub>Tiles for tabs, categories and genres, with their counts</sub> | ![Category filter](screenshots/1.4/category-4k.jpg)<br><sub>The Category filter: 4K (and 3D) first, then TMDB's genres</sub> |
+| ![Identify](screenshots/1.4/identify.jpg)<br><sub>Identify: the focused result's poster and plot – the same title, years apart</sub> | ![Statistics](screenshots/1.4/statistics.jpg)<br><sub>Statistics of the library</sub> |
+| ![Library settings](screenshots/1.4/settings-library.jpg)<br><sub>Settings → Library: Statistics and Import from R_video</sub> | |
 
 New in 1.2:
 
