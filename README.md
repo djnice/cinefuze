@@ -11,11 +11,16 @@ plays in the box's own Realtek player under CineFuze's controls.
 
 ![Movies wall](screenshots/movies.jpg)
 
-> **CineFuze 1.4:** a [Home screen](#screenshots) (off by default) with a spotlight, rows and tiles, in 16:9 and in
-> the 2.39:1 band; **Jellyfin servers** as library sources, played without transcoding, watch states synced;
-> library statistics; 3D and 4K in the Category filter; the Identify window shows each result's poster and
-> plot, the Versions window each version's file name; better matching of names with "3D", "UHD" or "Disc 1"; public
-> live TV channels by country (iptv-org); poster labels that can be turned off.
+> **CineFuze 1.4.1:** login to Jellyfin 12 servers fixed; add-on addresses, IPTV playlists and the TMDB server
+> **typed on your phone** (a QR code on the TV); **library backup and restore**; hide watched titles with any order; a
+> "Not identified" category; Extras folders left off the walls; the AUDIO / SUBTITLE keys open the track list;
+> subtitles switched on for audio in another language; subtitle brightness and calmer colours; audio delay in 5 ms
+> steps; 16:9-only or 2.39:1-only layouts and the red key to switch them; the poster wall and the letters row wrap.
+>
+> **1.4:** a [Home screen](#screenshots) (off by default) with a spotlight, rows and tiles, in 16:9 and in the 2.39:1
+> band; **Jellyfin servers** as library sources, played without transcoding, watch states synced; library
+> statistics; 3D and 4K in the Category filter; better matching of names with "3D", "UHD" or "Disc 1"; public live TV
+> channels by country (iptv-org).
 >
 > **1.3.9:** HDR10+ kept on Philips (MediaTek) TVs; Dolby Vision + HDR10+ hybrids recognised from the video stream;
 > HDR10+ as Dolby Vision on Realtek players; DTS and real channel counts in MP4; faster seek previews.
@@ -53,6 +58,8 @@ plays in the box's own Realtek player under CineFuze's controls.
   metadata and artwork, played as they are (Dolby Vision, HDR10+, no transcoding), resume points and watched marks
   synced with the server.
 - **Statistics:** movies, files with every version, 4K, 3D, Dolby Vision, HDR10+, collections, TV shows and episodes.
+- **Library backup and restore:** identifications, artwork, watched states and resume points saved in the player's
+  storage, and restored from there into another CineFuze on the same player.
 - Movies, TV shows, other videos, photos and music, each with its own wall – or all of them as folders.
 - **Your own categories** (Kids, Concerts, Documentaries …): a type and the sources it comes from, a tab of its own in
   the top menu if you like. A source can be **categories only**, so its titles stay off the main walls; a new source
