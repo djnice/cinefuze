@@ -11,7 +11,12 @@ plays in the box's own Realtek player under CineFuze's controls.
 
 ![Movies wall](screenshots/movies.jpg)
 
-> **CineFuze 1.4.2:** DTS:X / DTS-HD MA in MP4 passed through as DTS-HD; refresh rate switching on Zidoo and other
+> **CineFuze 1.4.3:** [favorite scene playlists](#screenshots) – scenes of any movies played back to back, from a
+> Scenes tab; Jellyfin movies grouped into their collections; a collection page offers the focused movie's artwork,
+> and a movie TMDB doesn't have gets its own images, title and year; no light bar across a bright HDR / Dolby Vision
+> picture when the player's controls show; the blue key opens Settings; help for every setting.
+>
+> **1.4.2:** DTS:X / DTS-HD MA in MP4 passed through as DTS-HD; refresh rate switching on Zidoo and other
 > Amlogic boxes without the Dune firmware; Jellyfin collections' movies all listed; bitstream behind an HDMI audio
 > extractor; Back ends on the home screen.
 >
@@ -133,7 +138,8 @@ plays in the box's own Realtek player under CineFuze's controls.
   the tracks you switch to are remembered for each movie (each episode).
 - The Dune HD player can be chosen instead: movies and episodes then play in the Dune HD's own player (its OSD), with
   the resume point saved; a disc starts with its menu or in lite mode.
-- Favorite scenes: mark the start and end while a movie plays; scene cards and a timeline on the detail page.
+- Favorite scenes: mark the start and end while a movie plays; scene cards and a timeline on the detail page;
+  playlists of scenes from any movies, played back to back (a Scenes tab).
 - **Skiptro:** a TV episode with its `.skiptro.json` beside it shows "OK: skip the intro" while the intro runs.
 
 ### Subtitles
@@ -199,6 +205,12 @@ plays in the box's own Realtek player under CineFuze's controls.
   and the main movie goes on in CineFuze. Frame stepping is not possible there.
 
 ## Screenshots
+
+New in 1.4.3:
+
+| | |
+|---|---|
+| ![Scene playlist](screenshots/1.4.3/scene-playlist.jpg)<br><sub>Favorite scene playlists: scenes of several movies, played back to back or repeated</sub> | ![Add to playlist](screenshots/1.4.3/scenes-add-to-playlist.jpg)<br><sub>A movie's favorite scenes: Add to playlist</sub> |
 
 New in 1.4:
 
