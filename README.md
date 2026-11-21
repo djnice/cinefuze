@@ -11,10 +11,14 @@ plays in the box's own Realtek player under CineFuze's controls.
 
 ![Movies wall](screenshots/movies.jpg)
 
-> **CineFuze 1.4.3:** [favorite scene playlists](#screenshots) – scenes of any movies played back to back, from a
-> Scenes tab; Jellyfin movies grouped into their collections; a collection page offers the focused movie's artwork,
-> and a movie TMDB doesn't have gets its own images, title and year; no light bar across a bright HDR / Dolby Vision
-> picture when the player's controls show; the blue key opens Settings; help for every setting.
+> **CineFuze 1.5:** **your own rating** (0.5–10) on movies and TV shows, shown on their posters, with its own sort
+> and home row; **your own lists** – Favourites, Watch later and lists of your own, independent of the folders, one
+> title in several lists – each with its own wall, menu tab, home tile and row; the green key puts a title in
+> Favourites, a watched title leaves Watch later; a TV show inside a movies-only source, a whole season in one file;
+> the posters' watching bar can be turned off.
+>
+> **1.4.3:** [favorite scene playlists](#screenshots); Jellyfin movies grouped into their collections; own images,
+> title and year for a movie TMDB doesn't have; the blue key opens Settings; help for every setting.
 >
 > **1.4.2:** DTS:X / DTS-HD MA in MP4 passed through as DTS-HD; refresh rate switching on Zidoo and other
 > Amlogic boxes without the Dune firmware; Jellyfin collections' movies all listed; bitstream behind an HDMI audio
@@ -73,8 +77,14 @@ plays in the box's own Realtek player under CineFuze's controls.
 - **Your own categories** (Kids, Concerts, Documentaries …): a type and the sources it comes from, a tab of its own in
   the top menu if you like. A source can be **categories only**, so its titles stay off the main walls; a new source
   can be added right in a category.
+- **Your own lists:** Favourites, Watch later and as many lists of your own as you like ("Snowy landscapes", "Must
+  rewatch" …), independent of the folders – a movie or TV show can be in several. "Lists…" in a poster's menu, the
+  green key for Favourites; a title you watch leaves Watch later. Each list has its own wall, a tab in the menu, a
+  home tile with a cover of your own; the posters show how many lists a title is in.
+- **Your own rating** from 0.5 to 10 on movies and TV shows: on the poster's corner, a "My rating" sort and a home row.
 - **Movies and TV shows in one source:** episodes are told apart by their names (S01E02, 1x02, Season 1 …), their
-  folders and TMDB; whatever it gets wrong can be set by hand from the item's menu.
+  folders and TMDB; whatever it gets wrong can be set by hand from the item's menu – in a movies-only source too, and a
+  whole season in one file is found as well.
 - Sources refresh by themselves when files change on the server (SMB change notifications while the app is open, a
   regular check otherwise); an unplugged drive's titles leave the walls and come back with it.
 - Metadata from TMDB in 20 languages (titles, plots, posters, backdrops, title logos), disc art from fanart.tv; the
@@ -93,8 +103,9 @@ plays in the box's own Realtek player under CineFuze's controls.
 
 ### Browsing
 - **Home screen** (off by default): a spotlight with the movies under way and the new ones, rows (Watching, Recently
-  added, New episodes, Collections, Top rated) and two rows of tiles for tabs, categories and genres, each with a
-  cover image of your own if you like; in 16:9 and in the 2.39:1 band.
+  added, New episodes, Collections, Top rated, My top rated, Favourites, Watch later, In the most lists) and two rows
+  of tiles for tabs, categories, lists and genres, each with a cover image of your own if you like; in 16:9 and in
+  the 2.39:1 band.
 - Four wall layouts: Highlight (the selected title large), Full wall, Large posters, and 2.39:1 variants for scope
   screens.
 - Sort and filter chips: A–Z, rating, runtime, date added, year, category (3D and 4K first, then TMDB's genres),
