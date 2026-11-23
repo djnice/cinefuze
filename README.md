@@ -11,11 +11,15 @@ plays in the box's own Realtek player under CineFuze's controls.
 
 ![Movies wall](screenshots/movies.jpg)
 
-> **CineFuze 1.5:** **your own rating** (0.5–10) on movies and TV shows, shown on their posters, with its own sort
-> and home row; **your own lists** – Favourites, Watch later and lists of your own, independent of the folders, one
-> title in several lists – each with its own wall, menu tab, home tile and row; the green key puts a title in
-> Favourites, a watched title leaves Watch later; a TV show inside a movies-only source, a whole season in one file;
-> the posters' watching bar can be turned off.
+> **CineFuze 1.6:** **3D Blu-ray ISOs** no longer freeze after a minute; 3D films made of several clips play in 3D,
+> with no dropped pictures between the clips; a 3D disc brings up the 3D module's installer when it isn't installed
+> yet; **DVD ISOs** in CineFuze's own player, with the disc's menu or straight into the movie, from Jellyfin too; a
+> **3D tab** for the top menu; the **front display** shows the movie's elapsed or remaining time; an episode's several
+> files as one card; chapters for UHD Blu-ray folders played without the menu; bitstream formats from the TV's EDID
+> on Realtek players.
+>
+> **1.5:** your own rating (0.5–10) and your own lists (Favourites, Watch later and lists of your own), each list
+> with its own wall, menu tab and home row; a TV show inside a movies-only source.
 >
 > **1.4.3:** [favorite scene playlists](#screenshots); Jellyfin movies grouped into their collections; own images,
 > title and year for a movie TMDB doesn't have; the blue key opens Settings; help for every setting.
@@ -145,6 +149,8 @@ plays in the box's own Realtek player under CineFuze's controls.
 - **Blu-ray folders and ISO images:** you choose how a disc starts – with its menu in the player's own Blu-ray player
   (HDMV and BD-J; when the main movie starts, CineFuze takes over, over SMB or NFS), or without the menu, straight into
   the main movie in CineFuze; a movie can resume without the menu too.
+- **DVD ISO images:** in CineFuze's own player on every box, with the disc's menu (the remote's arrows and OK steer
+  it; MENU brings it back from the chapter list) or straight into the movie, with the resume point.
 - **Audio and subtitle languages:** the languages a movie starts with, a "forced subtitles only" mode as in Kodi, and
   the tracks you switch to are remembered for each movie (each episode).
 - The Dune HD player can be chosen instead: movies and episodes then play in the Dune HD's own player (its OSD), with
