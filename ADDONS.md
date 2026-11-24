@@ -498,6 +498,7 @@ syntax: `results`, `data.list.*.item`, `blocks.*.items.*`, `assets.[type=dash].i
 | `{page}` | `pages`, `more.url` | The page number being fetched (9, 10.2) |
 | `{search}` | `catalog` | The search text (empty when not searching) |
 | `{genre}` | `catalog` | The picked genre / year (empty for *All*); with `genreValues` (8), its value there |
+| `{year}` | `catalog` | The value picked on the catalog's own **Year** chip (a `year` extra, CineFuze 1.7.2+; empty for *All*); with `yearValues` (8), its value there |
 | `{catalog.<key>}` | `catalog`, `catalogs.*` | The catalog's `params.<key>` |
 | `{catalog.id}` | `catalog`, `catalogs.*` | The catalog's id |
 | `{id}` | `meta`, `stream` | The item's (or episode's) id without the id prefix |
@@ -619,6 +620,7 @@ whose `params.spec` names an entry of `catalogs` uses that instead, section 9.)
 | `total` | path | none | A number in the answer: the catalog's size (shown, and ends the paging) |
 | `pageDiv` | integer | `1` | `{page}` is `skip / pageDiv + 1` |
 | `genreValues` | object | none | What `{genre}` is for the API, by the catalog's type and the picked genre's name: `{"movie": {"Animation": "16"}, "series": {"Animation": "16", "Kids": "10762"}}`. The `genre` extra's `options` list the names the chip shows; a name without a value here is sent as it is, *All* is empty. |
+| `yearValues` | object | none | The same for `{year}`: a catalog whose manifest `extra` has `{"name": "year", "options": [...]}` gets a second chip, **Year: All**, beside the genre's (CineFuze 1.7.2+; an older one shows no chip and sends `{year}` empty). A value may be a span, taken apart with regex templates: `{"movie": {"2025": "2025-01-01\|2025-12-31", "1990s": "1990-01-01\|1999-12-31"}}` with `…&primary_release_date.gte={year~^([^\|]+)}&primary_release_date.lte={year~\\|(.+)}` in the URL (TMDB ignores the empty ends of *All*). |
 | `skipIf` | condition | none | Items to leave out (7) |
 | `skipIfNot` | object | none | Items to leave out without an account flag (13.1) |
 | `meta` | object | none | How an item's fields are filled (8.4) |
