@@ -1,0 +1,213 @@
+{
+  "id": "hu.djnice.cinefuze.karacsonyi-filmek",
+  "version": "1.0.0",
+  "name": "Karácsonyi filmek",
+  "description": "Karácsonyi filmek a TMDB-ről (a „christmas” kulcsszó): népszerű, legújabb, legrégebbi, ABC szerint és a legjobbak, műfaj szerint is szűrhetően",
+  "logo": "https://raw.githubusercontent.com/djnice/cinefuze/main/addons/karacsony.svg",
+  "types": [
+    "movie"
+  ],
+  "resources": [
+    "catalog"
+  ],
+  "idPrefixes": [
+    "tmdb:"
+  ],
+  "catalogs": [
+    {
+      "type": "movie",
+      "id": "pop",
+      "name": "Népszerű",
+      "posterShape": "poster",
+      "extra": [
+        {
+          "name": "skip"
+        },
+        {
+          "name": "genre",
+          "options": [
+            "Vígjáték",
+            "Családi",
+            "Animáció",
+            "Romantikus",
+            "Dráma",
+            "Fantasy",
+            "Kaland",
+            "Akció",
+            "Zenei",
+            "Horror",
+            "Thriller",
+            "Tévéfilm"
+          ]
+        }
+      ],
+      "params": {
+        "sort": "popularity.desc",
+        "votes": "30"
+      }
+    },
+    {
+      "type": "movie",
+      "id": "new",
+      "name": "Legújabb",
+      "posterShape": "poster",
+      "extra": [
+        {
+          "name": "skip"
+        },
+        {
+          "name": "genre",
+          "options": [
+            "Vígjáték",
+            "Családi",
+            "Animáció",
+            "Romantikus",
+            "Dráma",
+            "Fantasy",
+            "Kaland",
+            "Akció",
+            "Zenei",
+            "Horror",
+            "Thriller",
+            "Tévéfilm"
+          ]
+        }
+      ],
+      "params": {
+        "sort": "primary_release_date.desc",
+        "votes": "30"
+      }
+    },
+    {
+      "type": "movie",
+      "id": "old",
+      "name": "Legrégebbi",
+      "posterShape": "poster",
+      "extra": [
+        {
+          "name": "skip"
+        },
+        {
+          "name": "genre",
+          "options": [
+            "Vígjáték",
+            "Családi",
+            "Animáció",
+            "Romantikus",
+            "Dráma",
+            "Fantasy",
+            "Kaland",
+            "Akció",
+            "Zenei",
+            "Horror",
+            "Thriller",
+            "Tévéfilm"
+          ]
+        }
+      ],
+      "params": {
+        "sort": "primary_release_date.asc",
+        "votes": "30"
+      }
+    },
+    {
+      "type": "movie",
+      "id": "abc",
+      "name": "ABC",
+      "posterShape": "poster",
+      "extra": [
+        {
+          "name": "skip"
+        },
+        {
+          "name": "genre",
+          "options": [
+            "Vígjáték",
+            "Családi",
+            "Animáció",
+            "Romantikus",
+            "Dráma",
+            "Fantasy",
+            "Kaland",
+            "Akció",
+            "Zenei",
+            "Horror",
+            "Thriller",
+            "Tévéfilm"
+          ]
+        }
+      ],
+      "params": {
+        "sort": "original_title.asc",
+        "votes": "30",
+        "order": "name"
+      }
+    },
+    {
+      "type": "movie",
+      "id": "top",
+      "name": "Legjobbak",
+      "posterShape": "poster",
+      "extra": [
+        {
+          "name": "skip"
+        },
+        {
+          "name": "genre",
+          "options": [
+            "Vígjáték",
+            "Családi",
+            "Animáció",
+            "Romantikus",
+            "Dráma",
+            "Fantasy",
+            "Kaland",
+            "Akció",
+            "Zenei",
+            "Horror",
+            "Thriller",
+            "Tévéfilm"
+          ]
+        }
+      ],
+      "params": {
+        "sort": "vote_average.desc",
+        "votes": "300"
+      }
+    }
+  ],
+  "cinefuze": {
+    "catalog": {
+      "url": "https://api.themoviedb.org/3/discover/movie?api_key={tmdb.key}&language={tmdb.lang}&with_keywords=207317&include_adult=false&sort_by={catalog.sort}&vote_count.gte={catalog.votes}&with_genres={genre}&page={page}",
+      "pageDiv": 20,
+      "genreValues": {
+        "movie": {
+          "Vígjáték": "35",
+          "Családi": "10751",
+          "Animáció": "16",
+          "Romantikus": "10749",
+          "Dráma": "18",
+          "Fantasy": "14",
+          "Kaland": "12",
+          "Akció": "28",
+          "Zenei": "10402",
+          "Horror": "27",
+          "Thriller": "53",
+          "Tévéfilm": "10770"
+        }
+      },
+      "items": "results",
+      "total": "total_results",
+      "skipIf": {
+        "poster_path": null
+      },
+      "meta": {
+        "id": "tmdb:{id}",
+        "name": "{title}",
+        "poster": "https://image.tmdb.org/t/p/w342{poster_path}",
+        "description": "{overview}",
+        "releaseInfo": "{release_date~(\\d\\d\\d\\d)}"
+      }
+    }
+  }
+}

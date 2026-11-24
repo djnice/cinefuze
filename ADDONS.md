@@ -677,6 +677,21 @@ With `pageDiv` 24 the pages asked are 1, 2, 3, … provided every page holds 24 
 
 `total` must be a JSON number; a number in a string is ignored.
 
+#### Name order (`"order": "name"`)
+
+An API's own title order is often not the one the cards show: TMDB's `title.asc` sorts by the original
+titles, not the translated ones. A catalog whose manifest `params` hold `"order": "name"` (or `"name.desc"`)
+is fetched whole instead, every page at once (up to 2000 items, from the first answer's `total`), and sorted
+by CineFuze by the items' `name` in the user's TMDB language: without a leading article ("The", "A", "Az",
+"Der", …, as the library's lists) and without quotes before the first letter. The sorted list is kept for
+30 minutes per catalog, genre and language. Needs CineFuze 1.7.2 or later; an older CineFuze pages through
+the API's own order, so give the URL the closest order the API has (`sort_by=original_title.asc` for TMDB).
+
+```json
+{"type": "movie", "id": "abc", "name": "A-Z", "extra": [{"name": "skip"}, {"name": "genre", "options": ["Comedy"]}],
+ "params": {"sort": "original_title.asc", "order": "name"}}
+```
+
 ### 8.4 The item mapping (`meta`)
 
 Each key is a template filled from one item of `items`:
