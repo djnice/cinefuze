@@ -11,12 +11,15 @@ plays in the box's own Realtek player under CineFuze's controls.
 
 ![Movies wall](screenshots/movies.jpg)
 
-> **CineFuze 1.6:** **3D Blu-ray ISOs** no longer freeze after a minute; 3D films made of several clips play in 3D,
-> with no dropped pictures between the clips; a 3D disc brings up the 3D module's installer when it isn't installed
-> yet; **DVD ISOs** in CineFuze's own player, with the disc's menu or straight into the movie, from Jellyfin too; a
-> **3D tab** for the top menu; the **front display** shows the movie's elapsed or remaining time; an episode's several
-> files as one card; chapters for UHD Blu-ray folders played without the menu; bitstream formats from the TV's EDID
-> on Realtek players.
+> **CineFuze 1.7:** in frame packed **3D the menus, the INFO panel and the subtitles are in both eyes** (a new 3D
+> module, installed once at the first 3D movie, which then goes on in 3D); **3D discs with their menu**, taken over
+> in 3D when the movie starts; fast, exact chapter jumps and seeks on 3D discs; the 3D output kept from one 3D movie
+> to the next; **preview images for Blu-ray disc images and folders**; resume for discs marked as watched; on
+> **Realtek players** 4K movies with the box's own player engine (smooth, HDR10) and the Dune's Dolby Vision output
+> mode (LLDV, Disabled, STD) followed.
+>
+> **1.6:** 3D Blu-ray ISOs no longer freeze; 3D films made of several clips in 3D; **DVD ISOs** with their menu in
+> CineFuze's own player; a 3D tab; the front display shows the movie's time; an episode's files as one card.
 >
 > **1.5:** your own rating (0.5–10) and your own lists (Favourites, Watch later and lists of your own), each list
 > with its own wall, menu tab and home row; a TV show inside a movies-only source.
