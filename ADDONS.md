@@ -506,6 +506,7 @@ syntax: `results`, `data.list.*.item`, `blocks.*.items.*`, `assets.[type=dash].i
 | `{value}` | `catalogs.*.pages`, `videos.head`, `videos.pages` | The list being fetched (9, 10.2) |
 | `{minute}` | everywhere but `auth` | Minutes since 1970: changes once a minute (for picture addresses that must change) |
 | `{now}` | everywhere but `auth` | Seconds since 1970 |
+| `{today}` | everywhere but `auth` | The box's date as `2026-12-24` (CineFuze 1.7.2+; empty before), e.g. TMDB's `release_date.lte={today}`: only what is out by now |
 | `{tmdb.key}` | everywhere but `auth` | CineFuze's own TMDB API key, so a file built on TMDB's lists needs no key of its own (empty in a build without TMDB) |
 | `{tmdb.lang}` | everywhere but `auth` | CineFuze's TMDB language (`hu-HU`, `en-US`, …): the one set in the settings, else the interface's |
 | `{wv}` | a `stream` block that has `drm` | `hardware` on a box with Widevine L1, else `software` |
@@ -683,7 +684,7 @@ With `pageDiv` 24 the pages asked are 1, 2, 3, … provided every page holds 24 
 
 An API's own title order is often not the one the cards show: TMDB's `title.asc` sorts by the original
 titles, not the translated ones. A catalog whose manifest `params` hold `"order": "name"` (or `"name.desc"`)
-is fetched whole instead, every page at once (up to 2000 items, from the first answer's `total`), and sorted
+is fetched whole instead, every page at once (up to 5000 items, from the first answer's `total`), and sorted
 by CineFuze by the items' `name` in the user's TMDB language: without a leading article ("The", "A", "Az",
 "Der", …, as the library's lists) and without quotes before the first letter. The sorted list is kept for
 30 minutes per catalog, genre and language. Needs CineFuze 1.7.2 or later; an older CineFuze pages through

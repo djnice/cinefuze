@@ -1,6 +1,6 @@
 {
   "id": "hu.djnice.cinefuze.karacsonyi-filmek",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "name": "Karácsonyi filmek",
   "description": "Karácsonyi filmek a TMDB-ről (a „christmas” kulcsszó): népszerű, legújabb, legrégebbi, ABC szerint és a legjobbak, műfaj és év szerint is szűrhetően",
   "logo": "https://raw.githubusercontent.com/djnice/cinefuze/main/addons/karacsony.svg",
@@ -72,7 +72,7 @@
       ],
       "params": {
         "sort": "popularity.desc",
-        "votes": "30"
+        "votes": "0"
       }
     },
     {
@@ -133,7 +133,7 @@
       ],
       "params": {
         "sort": "primary_release_date.desc",
-        "votes": "30"
+        "votes": "0"
       }
     },
     {
@@ -194,7 +194,7 @@
       ],
       "params": {
         "sort": "primary_release_date.asc",
-        "votes": "30"
+        "votes": "0"
       }
     },
     {
@@ -255,7 +255,7 @@
       ],
       "params": {
         "sort": "original_title.asc",
-        "votes": "30",
+        "votes": "0",
         "order": "name"
       }
     },
@@ -323,7 +323,7 @@
   ],
   "cinefuze": {
     "catalog": {
-      "url": "https://api.themoviedb.org/3/discover/movie?api_key={tmdb.key}&language={tmdb.lang}&with_keywords=207317&include_adult=false&sort_by={catalog.sort}&vote_count.gte={catalog.votes}&with_genres={genre}&primary_release_date.gte={year~^([^|]+)}&primary_release_date.lte={year~\\|(.+)}&page={page}",
+      "url": "https://api.themoviedb.org/3/discover/movie?api_key={tmdb.key}&language={tmdb.lang}&with_keywords=207317&include_adult=false&sort_by={catalog.sort}&vote_count.gte={catalog.votes}&with_genres={genre}&primary_release_date.gte={year~^([^|]+)}&primary_release_date.lte={year~\\|(.+)}&release_date.lte={today}&page={page}",
       "pageDiv": 20,
       "genreValues": {
         "movie": {
