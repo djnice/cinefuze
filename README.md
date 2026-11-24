@@ -11,12 +11,13 @@ plays in the box's own Realtek player under CineFuze's controls.
 
 ![Movies wall](screenshots/movies.jpg)
 
-> **CineFuze 1.7:** in frame packed **3D the menus, the INFO panel and the subtitles are in both eyes** (a new 3D
-> module, installed once at the first 3D movie, which then goes on in 3D); **3D discs with their menu**, taken over
-> in 3D when the movie starts; fast, exact chapter jumps and seeks on 3D discs; the 3D output kept from one 3D movie
-> to the next; **preview images for Blu-ray disc images and folders**; resume for discs marked as watched; on
-> **Realtek players** 4K movies with the box's own player engine (smooth, HDR10) and the Dune's Dolby Vision output
-> mode (LLDV, Disabled, STD) followed.
+> **CineFuze 1.7.1:** **Java menus (BD-J) of 3D Blu-rays** played by CineFuze itself, the movie taken over in 3D
+> (experimental; the Java runtime, 22 MB, is downloaded once under Settings → Playback); a collection's posters with
+> your rating and the 4K band; a movie file replaced under the same name read again.
+>
+> **1.7:** in frame packed **3D the menus, the INFO panel and the subtitles are in both eyes**; 3D discs with their
+> menu, taken over in 3D; fast chapter jumps and seeks on 3D discs; preview images for Blu-ray discs; on Realtek
+> players 4K movies with the box's own player engine.
 >
 > **1.6:** 3D Blu-ray ISOs no longer freeze; 3D films made of several clips in 3D; **DVD ISOs** with their menu in
 > CineFuze's own player; a 3D tab; the front display shows the movie's time; an episode's files as one card.
@@ -151,7 +152,9 @@ plays in the box's own Realtek player under CineFuze's controls.
 - Audio delay, subtitle delay.
 - **Blu-ray folders and ISO images:** you choose how a disc starts – with its menu in the player's own Blu-ray player
   (HDMV and BD-J; when the main movie starts, CineFuze takes over, over SMB or NFS), or without the menu, straight into
-  the main movie in CineFuze; a movie can resume without the menu too.
+  the main movie in CineFuze; a movie can resume without the menu too. A 3D Blu-ray's Java (BD-J) menu can be played
+  by CineFuze itself on S928X / S905X4 boxes (experimental, the
+  [Java runtime](https://github.com/djnice/bdj-runtime-android) downloaded once).
 - **DVD ISO images:** in CineFuze's own player on every box, with the disc's menu (the remote's arrows and OK steer
   it; MENU brings it back from the chapter list) or straight into the movie, with the resume point.
 - **Audio and subtitle languages:** the languages a movie starts with, a "forced subtitles only" mode as in Kodi, and
