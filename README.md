@@ -11,7 +11,15 @@ plays in the box's own Realtek player under CineFuze's controls.
 
 ![Movies wall](screenshots/movies.jpg)
 
-> **CineFuze 1.7.1:** **Java menus (BD-J) of 3D Blu-rays** played by CineFuze itself, the movie taken over in 3D
+> **CineFuze 1.7.2:** **an actor's movies** from their biography, the ones in your library first; the biography
+> scrolls with Up / Down; [three rows of small posters](#screenshots) in the 2.39:1 band again; CineFuze can **start on
+> an add-on** (Cinemeta, say); DVDs on the hardware decoder at the disc's own rate (Amlogic and Realtek); 3D Blu-ray
+> fixes on the S905X4 (controls and subtitles in both eyes, no HDMI handshake at a seek); on Realtek players DTS as
+> PCM where the TV lacks it and UHD Blu-ray ISOs with the box's own engine; separate PLAY / PAUSE and FAST FORWARD /
+> REWIND for **Control4** and other home automation; shows in a TV source's root each their own; a seasons row that
+> scrolls.
+>
+> **1.7.1:** **Java menus (BD-J) of 3D Blu-rays** played by CineFuze itself, the movie taken over in 3D
 > (experimental; the Java runtime, 22 MB, is downloaded once under Settings → Playback); a collection's posters with
 > your rating and the 4K band; a movie file replaced under the same name read again.
 >
@@ -115,11 +123,11 @@ plays in the box's own Realtek player under CineFuze's controls.
   of tiles for tabs, categories, lists and genres, each with a cover image of your own if you like; in 16:9 and in
   the 2.39:1 band.
 - Four wall layouts: Highlight (the selected title large), Full wall, Large posters, and 2.39:1 variants for scope
-  screens.
+  screens, three rows of small posters among them.
 - Sort and filter chips: A–Z, rating, runtime, date added, year, category (3D and 4K first, then TMDB's genres),
   folder; page jumps with P+ / P-.
-- Detail page: backdrop, title logo, director, a technical card, cast with face-centred photos and biographies,
-  extras (TMDB videos, soundtrack), and the trailer in a soft-edged window.
+- Detail page: backdrop, title logo, director, a technical card, cast with face-centred photos and biographies
+  (an actor's movies from there, the ones in your library first), extras (TMDB videos, soundtrack), and the trailer in a soft-edged window.
 - TV shows: episode detection from folders and file names, season posters, episode stills, a countdown to the next
   episode, Blu-ray discs whose chapters are episodes.
 - **Folders view** for those who prefer folders to a poster wall: the sources' folders and files as a list, the file
@@ -228,6 +236,15 @@ plays in the box's own Realtek player under CineFuze's controls.
   and the main movie goes on in CineFuze. Frame stepping is not possible there.
 
 ## Screenshots
+
+New in 1.7.2:
+
+![Three rows of small posters in 2.39:1](screenshots/1.7.2/small-posters-scope.jpg)
+<sub>Three rows of small posters in the 2.39:1 band of a CinemaScope screen</sub>
+
+| | |
+|---|---|
+| ![Actor biography](screenshots/1.7.2/actor-biography.jpg)<br><sub>An actor's biography: Up / Down scroll it, the "Movies" button under the photo</sub> | ![Actor's movies](screenshots/1.7.2/actor-movies.jpg)<br><sub>The actor's movies, the ones in your library first; OK opens a movie's page</sub> |
 
 New in 1.4.3:
 
