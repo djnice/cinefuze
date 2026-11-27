@@ -11,7 +11,10 @@ plays in the box's own Realtek player under CineFuze's controls.
 
 ![Movies wall](screenshots/movies.jpg)
 
-> **CineFuze 1.7.3:** **local Kodi .nfo files** (their ids, titles and plots) and the posters / fanart beside your
+> **CineFuze 1.7.4:** a **theme** to choose: the usual CineFuze blue or **Vision Discovery Gold** (a gold logo, gold
+> focus and highlights), under Settings → Appearance → Theme.
+>
+> **1.7.3:** **local Kodi .nfo files** (their ids, titles and plots) and the posters / fanart beside your
 > movies and shows; the music player shows the track's **lyrics** (embedded or a .lrc beside it, synced lines follow
 > the music); movies and series from **add-ons on Watch later** and your own lists; on Realtek players smooth 1080p
 > movies at the right refresh rate, audio and subtitle delay and subtitle files with the box's own engine too, and a
