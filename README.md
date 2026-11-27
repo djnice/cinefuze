@@ -11,7 +11,13 @@ plays in the box's own Realtek player under CineFuze's controls.
 
 ![Movies wall](screenshots/movies.jpg)
 
-> **CineFuze 1.7.2:** **an actor's movies** from their biography, the ones in your library first; the biography
+> **CineFuze 1.7.3:** **local Kodi .nfo files** (their ids, titles and plots) and the posters / fanart beside your
+> movies and shows; the music player shows the track's **lyrics** (embedded or a .lrc beside it, synced lines follow
+> the music); movies and series from **add-ons on Watch later** and your own lists; on Realtek players smooth 1080p
+> movies at the right refresh rate, audio and subtitle delay and subtitle files with the box's own engine too, and a
+> smoother poster wall.
+>
+> **1.7.2:** **an actor's movies** from their biography, the ones in your library first; the biography
 > scrolls with Up / Down; [three rows of small posters](#screenshots) in the 2.39:1 band again; CineFuze can **start on
 > an add-on** (Cinemeta, say); DVDs on the hardware decoder at the disc's own rate (Amlogic and Realtek); 3D Blu-ray
 > fixes on the S905X4 (controls and subtitles in both eyes, no HDMI handshake at a seek); on Realtek players DTS as
@@ -94,15 +100,17 @@ plays in the box's own Realtek player under CineFuze's controls.
   the top menu if you like. A source can be **categories only**, so its titles stay off the main walls; a new source
   can be added right in a category.
 - **Your own lists:** Favourites, Watch later and as many lists of your own as you like ("Snowy landscapes", "Must
-  rewatch" …), independent of the folders – a movie or TV show can be in several. "Lists…" in a poster's menu, the
-  green key for Favourites; a title you watch leaves Watch later. Each list has its own wall, a tab in the menu, a
-  home tile with a cover of your own; the posters show how many lists a title is in.
+  rewatch" …), independent of the folders – a movie or TV show can be in several, an add-on's movies and series
+  too. "Lists…" in a poster's menu, the green key for Favourites; a title you watch leaves Watch later. Each list has
+  its own wall, a tab in the menu, a home tile with a cover of your own; the posters show how many lists a title is in.
 - **Your own rating** from 0.5 to 10 on movies and TV shows: on the poster's corner, a "My rating" sort and a home row.
 - **Movies and TV shows in one source:** episodes are told apart by their names (S01E02, 1x02, Season 1 …), their
   folders and TMDB; whatever it gets wrong can be set by hand from the item's menu – in a movies-only source too, and a
   whole season in one file is found as well.
 - Sources refresh by themselves when files change on the server (SMB change notifications while the app is open, a
   regular check otherwise); an unplugged drive's titles leave the walls and come back with it.
+- Local Kodi .nfo files beside the movies and shows (their TMDB / IMDb ids, titles, sort titles and plots) and the
+  poster / fanart images next to them, when you keep your library in Kodi's way.
 - Metadata from TMDB in 20 languages (titles, plots, posters, backdrops, title logos), disc art from fanart.tv; the
   age rating of your TMDB language's country and the production countries. A TMDB id, an IMDb id or a link can be
   typed when a title needs to be matched by hand, and the results show their posters and plots; an own TMDB server
@@ -214,7 +222,8 @@ plays in the box's own Realtek player under CineFuze's controls.
 - A live slideshow rendered on the GPU in five styles – Polaroid, Photo table, Gallery wall, Collage zoom, Memories – with music
   if you like.
 - Music: album wall with covers and disc art (MusicBrainz, Cover Art Archive, fanart.tv), an album page with a
-  spinning record, and a player with four visualizers – bars, ring, neon wave and piano lights; FLAC, APE and the
+  spinning record, and a player with four visualizers – bars, ring, neon wave and piano lights – and the track's
+  lyrics (embedded in the file or a .lrc beside it, synced ones following the music); FLAC, APE and the
   usual formats, WavPack and DSD (DSF / DFF). On Dune HD boxes music can play at the track's own sample rate; on
   Zidoo boxes (experimental) through the Zidoo's own music engine.
 
