@@ -1,0 +1,490 @@
+{
+  "id": "hu.djnice.cinefuze.rtlplus",
+  "version": "1.1.0",
+  "name": "RTL+",
+  "description": "Az RTL+ műsorai az előfizetői fiókoddal, a box Widevine-jával",
+  "logo": "https://assets-bundle.6cloud.fr/hu-rtlmost-v5/17/svg-sprite/viewbox.svg#rtlhu_rtl_most",
+  "types": [
+    "series",
+    "movie",
+    "tv"
+  ],
+  "resources": [
+    "catalog",
+    "meta",
+    "stream"
+  ],
+  "idPrefixes": [
+    "rtl:"
+  ],
+  "catalogs": [
+    {
+      "type": "series",
+      "id": "home",
+      "name": "Főoldal",
+      "posterShape": "poster",
+      "extra": [],
+      "params": {
+        "spec": "home"
+      }
+    },
+    {
+      "type": "series",
+      "id": "continue",
+      "name": "Folytasd",
+      "posterShape": "poster",
+      "extra": [
+        {
+          "name": "skip"
+        }
+      ],
+      "params": {
+        "kind": "alias",
+        "folder": "home",
+        "blockTitle": "^Folytasd",
+        "block": "1dc3ad68-65ac-4fb3-8ffe-132385957a40"
+      }
+    },
+    {
+      "type": "series",
+      "id": "new",
+      "name": "Újdonságok",
+      "posterShape": "poster",
+      "extra": [
+        {
+          "name": "skip"
+        }
+      ],
+      "params": {
+        "kind": "alias",
+        "folder": "home",
+        "block": "fb071bac-43ba-4330-8e8f-e28826fa9364_1535",
+        "blockTitle": "^Újdonságok"
+      }
+    },
+    {
+      "type": "series",
+      "id": "series",
+      "name": "Sorozatok",
+      "posterShape": "poster",
+      "extra": [
+        {
+          "name": "skip"
+        },
+        {
+          "name": "search"
+        }
+      ],
+      "params": {
+        "kind": "folder",
+        "folder": "370",
+        "block": "a7e5ee0f-4e7d-4325-a2c3-01a200c91adb",
+        "blockTitle": "^Összes sorozat"
+      }
+    },
+    {
+      "type": "movie",
+      "id": "movies",
+      "name": "Filmek",
+      "posterShape": "poster",
+      "extra": [
+        {
+          "name": "skip"
+        }
+      ],
+      "params": {
+        "kind": "folder",
+        "folder": "1142",
+        "block": "6a742db4-273e-4e97-8934-cda190322221",
+        "blockTitle": "^Összes film"
+      }
+    },
+    {
+      "type": "series",
+      "id": "shows",
+      "name": "Showműsorok",
+      "posterShape": "poster",
+      "extra": [
+        {
+          "name": "skip"
+        }
+      ],
+      "params": {
+        "kind": "folder",
+        "folder": "274",
+        "block": "fb4c7cda-e322-4346-814b-298ce944417b",
+        "blockTitle": "^Összes showműsor"
+      }
+    },
+    {
+      "type": "series",
+      "id": "docs",
+      "name": "Ismeretterjesztők",
+      "posterShape": "poster",
+      "extra": [
+        {
+          "name": "skip"
+        }
+      ],
+      "params": {
+        "kind": "folder",
+        "folder": "282",
+        "block": "7a29f325-d760-4fb2-bd6d-ba2b2b4ba541",
+        "blockTitle": "^Összes ismeretterjesztő"
+      }
+    },
+    {
+      "type": "tv",
+      "id": "live",
+      "name": "Élő",
+      "posterShape": "landscape",
+      "extra": [],
+      "params": {
+        "spec": "live"
+      }
+    }
+  ],
+  "cinefuze": {
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Linux; Android 11) CineFuze"
+    },
+    "auth": {
+      "login": [
+        {
+          "url": "https://accounts.eu1.gigya.com/accounts.login",
+          "form": {
+            "loginID": "{user}",
+            "password": "{password}",
+            "APIKey": "3_PPu-M2jkoPTYt4mn-hVBG6nGPBjwEX6JJgwSNZi9X-ggzQr0lnx3Gt3gEIDscSSW",
+            "format": "json"
+          },
+          "ok": {
+            "errorCode": 0
+          },
+          "error": "{errorMessage}",
+          "save": {
+            "uid": "{UID}",
+            "sig": "{UIDSignature}",
+            "ts": "{signatureTimestamp}"
+          }
+        }
+      ],
+      "session": [
+        {
+          "url": "https://front-auth.6cloud.fr/v2/platforms/m6group_web/getJwt",
+          "headers": {
+            "X-Customer-Name": "rtlhu",
+            "x-auth-device-id": "{device}",
+            "X-Auth-gigya-uid": "{uid}",
+            "X-Auth-gigya-signature": "{sig}",
+            "X-Auth-gigya-signature-timestamp": "{ts}",
+            "X-Auth-profile-id": "{profile}",
+            "x-auth-device-name": "CineFuze",
+            "x-auth-device-model": "{model}"
+          },
+          "save": {
+            "jwt": "{token}"
+          }
+        },
+        {
+          "url": "https://6play-users.6play.fr/v2/platforms/m6group_web/users/{uid}/profiles",
+          "headers": {
+            "Authorization": "Bearer {jwt}",
+            "X-Customer-Name": "rtlhu"
+          },
+          "once": "profile",
+          "save": {
+            "profile": "{[is_kid=false].uid}"
+          }
+        },
+        {
+          "url": "https://front-auth.6cloud.fr/v2/platforms/m6group_web/getJwt",
+          "headers": {
+            "X-Customer-Name": "rtlhu",
+            "x-auth-device-id": "{device}",
+            "X-Auth-gigya-uid": "{uid}",
+            "X-Auth-gigya-signature": "{sig}",
+            "X-Auth-gigya-signature-timestamp": "{ts}",
+            "X-Auth-profile-id": "{profile}",
+            "x-auth-device-name": "CineFuze",
+            "x-auth-device-model": "{model}"
+          },
+          "save": {
+            "jwt": "{token}"
+          }
+        }
+      ],
+      "hosts": [
+        "layout.6cloud.fr",
+        "drm.6cloud.fr"
+      ],
+      "headers": {
+        "Authorization": "Bearer {jwt}",
+        "X-Customer-Name": "rtlhu"
+      },
+      "expires": "jwt",
+      "lost": [
+        401,
+        498
+      ],
+      "devices": {
+        "url": "https://layout.6cloud.fr/front/v1/rtlhu/m6group_web/main/token-web-31/frontspace/devicesmanagementcenter/layout?blockPage=1&nbPages=2",
+        "items": "blocks.*.content.items.*",
+        "id": "{itemContent.action.target.value_lock.reasonAttributes.deviceId}",
+        "name": "{itemContent.title}",
+        "info": "{itemContent.extraTitle}",
+        "current": "{itemContent.action.label~(Jelenlegi)}",
+        "remove": {
+          "url": "https://6play-users.6play.fr/v3/rtlhu/m6group_web/devices/toRevoke",
+          "method": "PATCH",
+          "headers": {
+            "Authorization": "Bearer {jwt}",
+            "X-Customer-Name": "rtlhu",
+            "Content-Type": "application/json"
+          },
+          "body": "{\"deviceId\":\"{id}\"}"
+        },
+        "self": "{device}"
+      }
+    },
+    "catalog": {
+      "url": "https://layout.6cloud.fr/front/v1/rtlhu/m6group_web/main/token-web-31/{catalog.kind}/{catalog.folder}/block/{block||catalog.block}?nbPages=4&page={page}",
+      "pageDiv": 6,
+      "items": "content.items",
+      "total": "content.pagination.totalItems",
+      "searchUrl": "https://nhacvivxxk-dsn.algolia.net/1/indexes/rtlmutu_prod_bedrock_layout_items_v2_rtlhu_main?query={search}&hitsPerPage=60&x-algolia-api-key=5fce02cb376fb2cda773be8a8404598a&x-algolia-application-id=NHACVIVXXK&facetFilters=%5B%5B%22metadata.item_type%3Aprogram%22%5D%2C%5B%22metadata.platforms_assets%3Am6group_web%22%5D%5D",
+      "searchItems": "hits.*.item",
+      "meta": {
+        "id": "rtl:{itemContent.action.target.value_layout.parent.id||itemContent.action.target.value_layout.id||itemContent.action.target.value_lock.originalTarget.value_layout.parent.id||itemContent.action.target.value_lock.originalTarget.value_layout.id}",
+        "name": "{itemContent.title||itemContent.image.caption}",
+        "poster": "https://images-fio.6play.fr/v2/images/{itemContent.image.idsByRatio.3:4||itemContent.image.idsByRatio.2:3||itemContent.image.id}/raw?width=360&height=480&fit=scale_crop&quality=80&hash=$sha1(/v2/images/{itemContent.image.idsByRatio.3:4||itemContent.image.idsByRatio.2:3||itemContent.image.id}/raw?width=360&height=480&fit=scale_crop&quality=8054b55408a530954b553ff79e98)$",
+        "description": "{itemContent.description}",
+        "releaseInfo": "{itemContent.highlight}",
+        "info": [
+          "{itemContent.extraDetails}"
+        ],
+        "badge": "{itemContent.action.target.value_lock?Csomagon kívül}{itemContent.action.target.value_layout.id~(offers)?Csomagon kívül}"
+      },
+      "lookup": {
+        "var": "block",
+        "url": "https://layout.6cloud.fr/front/v1/rtlhu/m6group_web/main/token-web-31/{catalog.kind}/{catalog.folder}/layout?blockPage={page}&nbPages=1",
+        "pages": 4,
+        "next": "pagination.nextPage",
+        "each": "blocks.*",
+        "where": {
+          "content.title.long": "{catalog.blockTitle}"
+        },
+        "value": "blockId"
+      }
+    },
+    "catalogs": {
+      "live": {
+        "url": "https://layout.6cloud.fr/front/v1/rtlhu/m6group_web/main/token-web-31/alias/home/layout?blockPage=1&nbPages=2",
+        "items": "blocks.*.content.items.*",
+        "only": {
+          "itemContent.action.target.value_layout.type": "live"
+        },
+        "meta": {
+          "id": "rtl:{itemContent.action.target.value_layout.parent.id||itemContent.action.target.value_layout.id||itemContent.action.target.value_lock.originalTarget.value_layout.parent.id||itemContent.action.target.value_lock.originalTarget.value_layout.id}",
+          "name": "{itemContent.title||itemContent.image.caption}",
+          "poster": "https://images-fio.6play.fr/v2/images/{itemContent.image.id}/raw?width=640&height=360&fit=scale_crop&quality=80&hash=$sha1(/v2/images/{itemContent.image.id}/raw?width=640&height=360&fit=scale_crop&quality=8054b55408a530954b553ff79e98)$",
+          "description": "{itemContent.description}",
+          "releaseInfo": "{itemContent.highlight}",
+          "info": [
+            "{itemContent.extraDetails}"
+          ],
+          "badge": "{itemContent.action.target.value_lock?Csomagon kívül}{itemContent.action.target.value_layout.id~(offers)?Csomagon kívül}"
+        }
+      },
+      "home": {
+        "url": "https://layout.6cloud.fr/front/v1/rtlhu/m6group_web/main/token-web-31/alias/home/layout?blockPage=1&nbPages=2",
+        "items": "blocks.*.content.items.*",
+        "only": {
+          "itemContent.action.target.value_layout.type": "program"
+        },
+        "meta": {
+          "id": "rtl:{itemContent.action.target.value_layout.parent.id||itemContent.action.target.value_layout.id||itemContent.action.target.value_lock.originalTarget.value_layout.parent.id||itemContent.action.target.value_lock.originalTarget.value_layout.id}",
+          "name": "{itemContent.secondaryImage.caption||itemContent.title||itemContent.image.caption}",
+          "poster": "https://images-fio.6play.fr/v2/images/{itemContent.image.idsByRatio.3:4||itemContent.image.idsByRatio.2:3||itemContent.image.id}/raw?width=360&height=480&fit=scale_crop&quality=80&hash=$sha1(/v2/images/{itemContent.image.idsByRatio.3:4||itemContent.image.idsByRatio.2:3||itemContent.image.id}/raw?width=360&height=480&fit=scale_crop&quality=8054b55408a530954b553ff79e98)$",
+          "description": "{itemContent.description}",
+          "releaseInfo": "{itemContent.highlight}",
+          "info": [
+            "{itemContent.extraDetails}"
+          ],
+          "badge": "{itemContent.action.target.value_lock?Csomagon kívül}{itemContent.action.target.value_layout.id~(offers)?Csomagon kívül}"
+        }
+      }
+    },
+    "meta": {
+      "url": "https://layout.6cloud.fr/front/v1/rtlhu/m6group_web/main/token-web-31/program/{id}/layout?blockPage=1&nbPages=2",
+      "fields": {
+        "name": "{entity.metadata.title}",
+        "description": "{blocks.0.content.items.0.itemContent.description}",
+        "poster": "https://images-fio.6play.fr/v2/images/{blocks.0.content.items.0.itemContent.secondaryImage.id||blocks.0.content.items.0.itemContent.image.id}/raw?width=480&height=270&fit=scale_crop&quality=80&hash=$sha1(/v2/images/{blocks.0.content.items.0.itemContent.secondaryImage.id||blocks.0.content.items.0.itemContent.image.id}/raw?width=480&height=270&fit=scale_crop&quality=8054b55408a530954b553ff79e98)$",
+        "background": "https://images-fio.6play.fr/v2/images/{blocks.0.content.items.0.itemContent.image.id}/raw?width=1280&height=720&fit=scale_crop&quality=80&hash=$sha1(/v2/images/{blocks.0.content.items.0.itemContent.image.id}/raw?width=1280&height=720&fit=scale_crop&quality=8054b55408a530954b553ff79e98)$",
+        "genres": "blocks.0.content.items.0.itemContent.extraDetails"
+      },
+      "videos": {
+        "each": "blocks.*",
+        "value": "blockId",
+        "choose": {
+          "content.contentTemplateId": "^CardM$",
+          "content.title.long": "^(?!.*(?i:előzetes|bemutatkoz|szereplő|werk|extra|exkluzív|részlet|interjú|kulissz)).*$"
+        },
+        "more": {
+          "url": "https://layout.6cloud.fr/front/v1/rtlhu/m6group_web/main/token-web-31/program/{id}/layout?blockPage={page}&nbPages=2",
+          "from": 2,
+          "next": "pagination.nextPage"
+        },
+        "pages": "https://layout.6cloud.fr/front/v1/rtlhu/m6group_web/main/token-web-31/program/{id}/block/{value}?nbPages=4&page={page}",
+        "firstPage": 1,
+        "pageStep": 4,
+        "items": "content.items",
+        "maxPages": 60,
+        "video": {
+          "id": "rtl:{itemContent.action.target.value_layout.id||itemContent.action.target.value_lock.originalTarget.value_layout.id}",
+          "title": "{itemContent.extraTitle||itemContent.title||itemContent.image.caption}",
+          "season": "{itemContent.extraTitle~(\\d+)\\. évad}",
+          "episode": "{itemContent.extraTitle~(\\d+)\\. rész}",
+          "released": "{itemContent.highlight}",
+          "thumbnail": "https://images-fio.6play.fr/v2/images/{itemContent.image.id}/raw?width=640&height=360&fit=scale_crop&quality=80&hash=$sha1(/v2/images/{itemContent.image.id}/raw?width=640&height=360&fit=scale_crop&quality=8054b55408a530954b553ff79e98)$",
+          "overview": "{itemContent.description}"
+        }
+      }
+    },
+    "meta_movie": {
+      "url": "https://layout.6cloud.fr/front/v1/rtlhu/m6group_web/main/token-web-31/program/{id}/layout?blockPage=1&nbPages=2",
+      "fields": {
+        "name": "{entity.metadata.title}",
+        "description": "{blocks.0.content.items.0.itemContent.description}",
+        "poster": "https://images-fio.6play.fr/v2/images/{blocks.0.content.items.0.itemContent.secondaryImage.id||blocks.0.content.items.0.itemContent.image.id}/raw?width=480&height=270&fit=scale_crop&quality=80&hash=$sha1(/v2/images/{blocks.0.content.items.0.itemContent.secondaryImage.id||blocks.0.content.items.0.itemContent.image.id}/raw?width=480&height=270&fit=scale_crop&quality=8054b55408a530954b553ff79e98)$",
+        "background": "https://images-fio.6play.fr/v2/images/{blocks.0.content.items.0.itemContent.image.id}/raw?width=1280&height=720&fit=scale_crop&quality=80&hash=$sha1(/v2/images/{blocks.0.content.items.0.itemContent.image.id}/raw?width=1280&height=720&fit=scale_crop&quality=8054b55408a530954b553ff79e98)$",
+        "genres": "blocks.0.content.items.0.itemContent.extraDetails"
+      }
+    },
+    "stream": {
+      "steps": [
+        {
+          "url": "https://layout.6cloud.fr/front/v1/rtlhu/m6group_web/main/token-web-31/video/{id}/layout?blockPage=1&nbPages=1",
+          "refuse": {
+            "redirection.reasonCode": "devices_gate"
+          },
+          "reason": "A fiókod 5 eszközös korlátja betelt. Válassz le egy eszközt az rtlplusz.hu oldalon: Profilom, Eszközeim kezelése.",
+          "save": {
+            "mpd": "{blocks.0.content.items.0.itemContent.video.assets.[format=dashcenc,drm.type=$wv].path||blocks.0.content.items.0.itemContent.video.assets.[format=dashcenc].path}",
+            "svc": "{blocks.0.content.items.0.itemContent.video.assets.[format=dashcenc].service}",
+            "cid": "{blocks.0.content.items.0.itemContent.video.assets.[format=dashcenc].drm.config.contentId}"
+          },
+          "need": "mpd",
+          "needReason": "Ehhez a tartalomhoz nagyobb csomag kell, vagy most nem érhető el."
+        },
+        {
+          "url": "https://drm.6cloud.fr/v1/customers/rtlhu/platforms/m6group_web/services/{svc}/users/{auth.uid}/videos/{cid}/upfront-token",
+          "save": {
+            "token": "{token}"
+          }
+        }
+      ],
+      "stream": "{mpd}",
+      "drm": {
+        "license": "https://lic.drmtoday.com/license-proxy-widevine/cenc/",
+        "headers": {
+          "x-dt-auth-token": "{token}",
+          "Origin": "https://www.rtlplusz.hu"
+        },
+        "field": "license"
+      }
+    },
+    "stream_movie": {
+      "steps": [
+        {
+          "url": "https://layout.6cloud.fr/front/v1/rtlhu/m6group_web/main/token-web-31/program/{id}/layout?blockPage=1&nbPages=2",
+          "save": {
+            "clip": "{blocks.0.content.items.0.itemContent.action.target.value_layout.id||blocks.0.content.items.0.itemContent.action.target.value_lock.originalTarget.value_layout.id}"
+          }
+        },
+        {
+          "url": "https://layout.6cloud.fr/front/v1/rtlhu/m6group_web/main/token-web-31/video/{clip}/layout?blockPage=1&nbPages=1",
+          "refuse": {
+            "redirection.reasonCode": "devices_gate"
+          },
+          "reason": "A fiókod 5 eszközös korlátja betelt. Válassz le egy eszközt az rtlplusz.hu oldalon: Profilom, Eszközeim kezelése.",
+          "save": {
+            "mpd": "{blocks.0.content.items.0.itemContent.video.assets.[format=dashcenc,drm.type=$wv].path||blocks.0.content.items.0.itemContent.video.assets.[format=dashcenc].path}",
+            "svc": "{blocks.0.content.items.0.itemContent.video.assets.[format=dashcenc].service}",
+            "cid": "{blocks.0.content.items.0.itemContent.video.assets.[format=dashcenc].drm.config.contentId}"
+          },
+          "need": "mpd",
+          "needReason": "Ehhez a tartalomhoz nagyobb csomag kell, vagy most nem érhető el."
+        },
+        {
+          "url": "https://drm.6cloud.fr/v1/customers/rtlhu/platforms/m6group_web/services/{svc}/users/{auth.uid}/videos/{cid}/upfront-token",
+          "save": {
+            "token": "{token}"
+          }
+        }
+      ],
+      "stream": "{mpd}",
+      "drm": {
+        "license": "https://lic.drmtoday.com/license-proxy-widevine/cenc/",
+        "headers": {
+          "x-dt-auth-token": "{token}",
+          "Origin": "https://www.rtlplusz.hu"
+        },
+        "field": "license"
+      }
+    },
+    "stream_tv": {
+      "steps": [
+        {
+          "url": "https://layout.6cloud.fr/front/v1/rtlhu/m6group_web/main/token-web-31/live/{id}/layout?blockPage=1&nbPages=1",
+          "refuse": {
+            "redirection.reasonCode": "devices_gate"
+          },
+          "reason": "A fiókod 5 eszközös korlátja betelt. Válassz le egy eszközt az rtlplusz.hu oldalon: Profilom, Eszközeim kezelése.",
+          "save": {
+            "mpd": "{blocks.0.content.items.0.itemContent.video.assets.[format=dashcenc].path}",
+            "svc": "{blocks.0.content.items.0.itemContent.video.assets.[format=dashcenc].service}",
+            "cid": "{blocks.0.content.items.0.itemContent.video.assets.[format=dashcenc].drm.config.contentId}"
+          },
+          "need": "mpd",
+          "needReason": "Ez az adás most nem érhető el."
+        },
+        {
+          "url": "https://drm.6cloud.fr/v1/customers/rtlhu/platforms/m6group_web/services/{svc}/users/{auth.uid}/live/{cid}/upfront-token",
+          "save": {
+            "token": "{token}"
+          }
+        }
+      ],
+      "stream": "{mpd}",
+      "drm": {
+        "license": "https://lic.drmtoday.com/license-proxy-widevine/cenc/",
+        "headers": {
+          "x-dt-auth-token": "{token}",
+          "Origin": "https://www.rtlplusz.hu"
+        },
+        "field": "license"
+      }
+    },
+    "gates": [
+      {
+        "if": {
+          "redirection.reasonCode": "devices_gate"
+        },
+        "reason": "A box nincs a fiókod eszközei között: betelt az 5 eszközös korlát. Válassz le egy eszközt: Beállítások › Kiegészítők › RTL+ › Eszközök, vagy az rtlplusz.hu oldalon."
+      },
+      {
+        "if": {
+          "redirection.reasonCode": "missing_entity"
+        },
+        "reason": "Ez most nem érhető el az RTL+-on."
+      },
+      {
+        "has": "redirection.reasonCode",
+        "reason": "Az RTL+ ehelyett mást küldött ({redirection.reasonCode})."
+      }
+    ],
+    "gateCheck": "https://layout.6cloud.fr/front/v1/rtlhu/m6group_web/main/token-web-31/app/account_overview/layout?blockPage=1&nbPages=1"
+  }
+}

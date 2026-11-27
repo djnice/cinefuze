@@ -1,0 +1,386 @@
+{
+  "id": "hu.djnice.cinefuze.tv2play",
+  "version": "1.2.1",
+  "name": "TV2 Play",
+  "description": "A TV2 Play műsorai, sorozatai csatornánként; prémium fiókkal a prémium tartalom is, a DRM-es filmek a box Widevine-jával",
+  "logo": "https://tv2play.hu/favicon/favicon_196.ico",
+  "types": [
+    "series",
+    "movie"
+  ],
+  "resources": [
+    "catalog",
+    "meta",
+    "stream"
+  ],
+  "idPrefixes": [
+    "tv2:"
+  ],
+  "catalogs": [
+    {
+      "type": "series",
+      "id": "all",
+      "name": "Összes",
+      "posterShape": "poster",
+      "extra": [
+        {
+          "name": "skip"
+        },
+        {
+          "name": "search"
+        }
+      ],
+      "params": {
+        "filter": ""
+      }
+    },
+    {
+      "type": "series",
+      "id": "tv2",
+      "name": "TV2",
+      "posterShape": "poster",
+      "extra": [
+        {
+          "name": "skip"
+        }
+      ],
+      "params": {
+        "filter": "*channel:1;"
+      }
+    },
+    {
+      "type": "series",
+      "id": "supertv2",
+      "name": "Super TV2",
+      "posterShape": "poster",
+      "extra": [
+        {
+          "name": "skip"
+        }
+      ],
+      "params": {
+        "filter": "*channel:2;"
+      }
+    },
+    {
+      "type": "series",
+      "id": "fem3",
+      "name": "FEM3",
+      "posterShape": "poster",
+      "extra": [
+        {
+          "name": "skip"
+        }
+      ],
+      "params": {
+        "filter": "*channel:3;"
+      }
+    },
+    {
+      "type": "series",
+      "id": "spilertv",
+      "name": "Spíler TV",
+      "posterShape": "poster",
+      "extra": [
+        {
+          "name": "skip"
+        }
+      ],
+      "params": {
+        "filter": "*channel:5;"
+      }
+    },
+    {
+      "type": "series",
+      "id": "izauratv",
+      "name": "Izaura TV",
+      "posterShape": "poster",
+      "extra": [
+        {
+          "name": "skip"
+        }
+      ],
+      "params": {
+        "filter": "*channel:6;"
+      }
+    },
+    {
+      "type": "series",
+      "id": "zenebutik",
+      "name": "Zenebutik",
+      "posterShape": "poster",
+      "extra": [
+        {
+          "name": "skip"
+        }
+      ],
+      "params": {
+        "filter": "*channel:7;"
+      }
+    },
+    {
+      "type": "series",
+      "id": "prime",
+      "name": "Prime",
+      "posterShape": "poster",
+      "extra": [
+        {
+          "name": "skip"
+        }
+      ],
+      "params": {
+        "filter": "*channel:8;"
+      }
+    },
+    {
+      "type": "series",
+      "id": "tv2sef",
+      "name": "TV2 Séf",
+      "posterShape": "poster",
+      "extra": [
+        {
+          "name": "skip"
+        }
+      ],
+      "params": {
+        "filter": "*channel:9;"
+      }
+    },
+    {
+      "type": "movie",
+      "id": "moziplusz",
+      "name": "Mozi+",
+      "posterShape": "poster",
+      "params": {
+        "flag": "premium",
+        "spec": "movies",
+        "channel": "moziplusz"
+      }
+    },
+    {
+      "type": "movie",
+      "id": "moziverzum",
+      "name": "Moziverzum",
+      "posterShape": "poster",
+      "params": {
+        "flag": "premium",
+        "spec": "movies",
+        "channel": "moziverzum"
+      }
+    },
+    {
+      "type": "series",
+      "id": "tv2comedy",
+      "name": "TV2 Comedy",
+      "posterShape": "poster",
+      "extra": [
+        {
+          "name": "skip"
+        }
+      ],
+      "params": {
+        "flag": "premium",
+        "filter": "*channel:11;"
+      }
+    },
+    {
+      "type": "series",
+      "id": "tv2kids",
+      "name": "TV2 Kids",
+      "posterShape": "poster",
+      "extra": [
+        {
+          "name": "skip"
+        }
+      ],
+      "params": {
+        "flag": "premium",
+        "filter": "*channel:10;"
+      }
+    },
+    {
+      "type": "series",
+      "id": "jockytv",
+      "name": "Jocky TV",
+      "posterShape": "poster",
+      "extra": [
+        {
+          "name": "skip"
+        }
+      ],
+      "params": {
+        "flag": "premium",
+        "filter": "*channel:12;"
+      }
+    },
+    {
+      "type": "series",
+      "id": "spiler_extra",
+      "name": "Spíler Extra",
+      "posterShape": "poster",
+      "extra": [
+        {
+          "name": "skip"
+        }
+      ],
+      "params": {
+        "flag": "premium",
+        "filter": "*channel:15;"
+      }
+    }
+  ],
+  "cinefuze": {
+    "base": "https://tv2play.hu/",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Linux; Android 11) CineFuze",
+      "Accept": "*/*"
+    },
+    "auth": {
+      "url": "https://tv2play.hu/api/authenticate",
+      "body": {
+        "email": "{user}",
+        "password": "{password}",
+        "stayLoggedIn": true,
+        "deviceToken": {
+          "token": null,
+          "platform": "web"
+        }
+      },
+      "ok": {
+        "success": true
+      },
+      "check": "https://tv2play.hu/api/users/me",
+      "flags": {
+        "premium": "isPremium"
+      },
+      "labels": {
+        "premium": "prémium"
+      },
+      "logout": "https://tv2play.hu/api/logout"
+    },
+    "catalog": {
+      "url": "https://tv2-prod.d-saas.com/grrec-tv2-prod-war/JSServlet4?&rn=&cid=&ts={now}&rd=0,TV2_W_CONTENT_LISTING,50,%5B*platform:web;*domain:tv2play;*currentContent:SHOW;*country:HU;*userAge:18;{catalog.filter}*pagingOffset:{skip}%5D,%5Btitle;url;imageUrl;lead;contentType;category;isPremium%5D",
+      "searchUrl": "https://tv2-prod.d-saas.com/grrec-tv2-prod-war/JSServlet4?&rn=&cid=&ts={now}&rd=0,TV2_W_SEARCH_RESULT,80,%5B*platform:web;*domain:tv2play;*country:HU;*userAge:18;*pagingOffset:0;*contentType:SHOW;*query:{search}%5D,%5Btitle;url;imageUrl;lead;contentType;category;isPremium%5D",
+      "extract": "var data = (\\{.*?\\});",
+      "items": "recommendationWrappers.0.recommendation.items",
+      "skipIfNot": {
+        "premium": {
+          "isPremium": "true"
+        }
+      },
+      "meta": {
+        "id": "tv2:{url}",
+        "name": "{title}",
+        "poster": "{imageUrl}",
+        "description": "{lead}",
+        "releaseInfo": "{category}"
+      }
+    },
+    "catalogs": {
+      "movies": {
+        "url": "https://tv2play.hu/api/premium/search/{catalog.channel}",
+        "each": "ribbonIds.*",
+        "pages": "https://tv2play.hu/api/ribbons/{value}/{page}",
+        "items": "cards",
+        "only": {
+          "cardType": "MOVIE"
+        },
+        "maxPages": 20,
+        "meta": {
+          "id": "tv2:{slug}",
+          "name": "{title}",
+          "poster": "{imageUrl}",
+          "description": "{lead}"
+        }
+      }
+    },
+    "meta": {
+      "url": [
+        "https://tv2play.hu/api/search/{id|path}",
+        "https://tv2play.hu/api/premium/search/{id|path}"
+      ],
+      "fields": {
+        "name": "{pages.0.title}",
+        "description": "{pages.0.lead}",
+        "poster": "{pages.0.tabs.*.showData.imageUrl}",
+        "background": "{pages.0.backgroundImageUrl}",
+        "genres": "pages.0.genre.*"
+      },
+      "videos": {
+        "each": "pages.*.tabs.*.ribbonIds.*",
+        "head": "https://tv2play.hu/api/ribbons/{value}",
+        "prefer": {
+          "title": "(?i)teljes ad"
+        },
+        "pages": "https://tv2play.hu/api/ribbons/{value}/{page}",
+        "items": "cards",
+        "maxPages": 60,
+        "otherPages": 10,
+        "video": {
+          "id": "tv2:{slug}",
+          "title": "{title}",
+          "season": "{seriesInfo.seasonNr}",
+          "episode": "{seriesInfo.episodeNr}",
+          "released": "{availableFrom}",
+          "thumbnail": "{imageUrl}"
+        }
+      }
+    },
+    "meta_movie": {
+      "url": [
+        "https://tv2play.hu/api/premium/search/{id|path}",
+        "https://tv2play.hu/api/search/{id|path}"
+      ],
+      "fields": {
+        "name": "{title}",
+        "description": "{lead}",
+        "poster": "{imageUrl}",
+        "background": "{imageUrl}"
+      }
+    },
+    "stream": {
+      "steps": [
+        {
+          "url": [
+            "https://tv2play.hu/api/search/{id|path}",
+            "https://tv2play.hu/api/premium/search/{id|path}"
+          ],
+          "when": {
+            "if": {
+              "drmIsRequired": true
+            },
+            "use": "stream_drm"
+          }
+        },
+        [
+          "https://tv2play.hu/api/streaming-url?playerId={playerId}",
+          "https://tv2play.hu/api/premium/streaming-url?playerId={playerId}"
+        ],
+        "{url}"
+      ],
+      "stream": "{bitrates.hls}"
+    },
+    "stream_drm": {
+      "steps": [
+        [
+          "https://tv2play.hu/api/premium/streaming-jwt?playerId={playerId}",
+          "https://tv2play.hu/api/streaming-jwt?playerId={playerId}"
+        ],
+        {
+          "url": "{url}",
+          "post": "{token}",
+          "postType": "application/x-www-form-urlencoded"
+        }
+      ],
+      "stream": "{bitrates.dash}",
+      "reason": "Ehhez a filmhez nem érkezett DRM-es stream.",
+      "drm": {
+        "license": "https://widevine.keyos.com/api/v4/getLicense",
+        "headers": {
+          "customdata": "{drm.data}"
+        },
+        "field": ""
+      }
+    }
+  }
+}
