@@ -11,7 +11,14 @@ plays in the box's own Realtek player under CineFuze's controls.
 
 ![Movies wall](screenshots/movies.jpg)
 
-> **CineFuze 1.7.4:** a **theme** to choose: the usual CineFuze blue or **Vision Discovery Gold** (a gold logo, gold
+> **CineFuze 1.7.5:** **WebDAV servers** as library sources (a cloud service such as Premiumize, a Nextcloud, a NAS);
+> **Emby servers** next to Jellyfin; **music and photo libraries** from Jellyfin and Emby (a "Home videos and photos"
+> library split into its photos and its videos); the server's **intro markers** for "Skip intro" and Emby's preview
+> images; NFO-only TV shows with their own show, season and episode images; one show in two sources is one show;
+> German titles written without umlauts found; old FLAC rips' accented tags read right; white descriptions in Vision
+> Discovery Gold.
+>
+> **1.7.4:** a **theme** to choose: the usual CineFuze blue or **Vision Discovery Gold** (a gold logo, gold
 > focus and highlights), under Settings → Appearance → Theme.
 >
 > **1.7.3:** **local Kodi .nfo files** (their ids, titles and plots) and the posters / fanart beside your
@@ -91,9 +98,10 @@ plays in the box's own Realtek player under CineFuze's controls.
 
 ### Library
 - Sources: SMB shares (NAS, PC) and the box's own drives (USB, internal HDD); network browsing (NetBIOS, mDNS) that
-  reuses the logins the player's firmware has saved.
-- **Jellyfin servers** as sources: login by password or Quick Connect, the movies and TV shows with the server's own
-  metadata and artwork, played as they are (Dolby Vision, HDR10+, no transcoding), resume points and watched marks
+  reuses the logins the player's firmware has saved; **WebDAV servers** (a cloud service such as Premiumize, a
+  Nextcloud, a NAS) over HTTPS with a login, read only.
+- **Jellyfin and Emby servers** as sources: login by password (or Quick Connect on Jellyfin), the movies and TV shows
+  with the server's own metadata and artwork, its music and photos too, played as they are (Dolby Vision, HDR10+, no transcoding), resume points and watched marks
   synced with the server.
 - **Statistics:** movies, files with every version, 4K, 3D, Dolby Vision, HDR10+, collections, TV shows and episodes.
 - **Library backup and restore:** identifications, artwork, watched states and resume points saved in the player's
@@ -307,7 +315,7 @@ epgshare01 guide; the programme texts are the guide's, in Hungarian.)</sub>
 - A Dune HD or R_volution player with an Amlogic S928X or S905X4 (a Dune HD with Dune HD or Homatics firmware),
   Android 11 or newer; or a Realtek player (Dune HD Real Vision 4K, Zappiti – experimental).
 - A 32-bit (armeabi-v7a) userspace.
-- Media on a NAS / PC (SMB) or a drive connected to the box.
+- Media on a NAS / PC (SMB), a WebDAV, Jellyfin or Emby server, or a drive connected to the box.
 
 ## Download
 The APK is under [Releases](https://github.com/djnice/cinefuze/releases). Install it like any other APK on the box
